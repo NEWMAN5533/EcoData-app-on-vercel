@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <meta name="google-site-verification" content="uPuuYtdufpe-I9fBtT046jnMoZO7yvAEzEyCemHr1S0" />
+
+  <meta name="title" content="EcoData">
+  <meta name="description" content="Ecodata lets you buy affordable data bundles for MTN, Telecel & AirtelTigo with Fast delivery, Secure Payment, and the best discount in Ghana. Shop affordable data packages for browsing, streaming, and more on Ecodata">
+  <title>Ecodata</title>
+
+
+  <!---shortcut-icon-->
+  <link rel="shortcut icon" href=".\css/icons/icon-shortcut.png" type="image/png">
+
+  <!---ICO-->
+  <link rel="shortcut icon" href=".\css/icons/favicon-ico.png" type="image/png">
+
+<!---FULL-OPEN-GRAPH-->
+<meta property="og:title" content="Buy Cheap Data Bundles in Ghana on Ecodata Website">
+<meta property="og:description" content="Affordable MTN, Telecel & AirtelTigo data bundles. Reliable, Fastest-delivery, and secure paystack payment.">
+<meta property="og:url" content="https://ecodata-app.onrender.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EcoData">
+
+
+<!----GOOGLE-SITE-SEARCH-ENDS-->
+
+
+
+
+
+  <!---css-link-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleGlobal.css">
+
+
+  <style>
+
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .notification-container{
+      width: 100%;
+      height: 100vh;
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 .5rem;
+      flex-direction: column;
+      gap: 1rem;
+      justify-self: center;
+      top: 3.1rem;
+      position: relative;
+      margin-bottom: 4rem;
+    }
+
+    .notification-container .noti-wrap{
+      width: 100%;
+      min-height: max-content;
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 .5rem;
+      flex-direction: column;
+      gap: 1.5rem;
+      justify-self: center;
+      top: 3.1rem;
+      position: relative;
+      margin-bottom: 4rem;
+    }
+
+    .notification-container .notification-card{
+      width: 100%;
+      max-width: 98%;
+      height: max-content;
+      justify-self: center;
+      display: flex;
+      gap: .7rem;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      flex-direction: column;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      border-radius: .6rem;
+      position: relative;
+    }
+
+    .notification-card .noti-top{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: max-content;
+      padding: .2rem;
+      background: rgb(149, 149, 165);
+      border-radius: 4px;
+      color: white;
+      opacity: .7;
+    }
+
+    .notification-card .noti-middle{
+      color: rgb(116, 121, 128);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: .8rem;
+    }
+
+    .dark-mode .notification-card {
+      background: var(--welcome-card-bg);
+      border: 1px solid rgb(51, 48, 48);
+    }
+
+    .noti-title{
+      width: 100%;
+      height: 3rem;
+      display:flex;
+      align-items: center;
+      justify-content: start;
+      padding: 0 1rem;
+    } 
+
+    .noti-title h1{
+      color: rgb(83, 87, 99);
+      font-size: 1.4rem;
+    }
+
+
+    .dark-mode .noti-title h1{
+      color: white;
+      opacity: .74;
+    }
+
+    /***
+    NOTI BTTOM
+    **/
+    .notification-card .noti-bottom{
+      width: 100%;
+      height: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .noti-bottom .mark{
+      border: none;
+      background: rgb(76, 76, 83);
+      color: white;
+      padding: .1rem .2rem;
+      font-size: .6rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: max-content;
+      height: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      border-radius: 2px;
+      opacity: .7;
+    }
+
+      .notification-card .noti-bottom {
+      border: 1px solid rgb(235, 226, 226);
+      color: rgb(15, 127, 192);
+      padding: .3rem;
+      font-size: .7rem;
+      font-weight: 600;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .dark-mode .noti-bottom {
+      border: 1px solid rgb(8, 25, 48);
+      color: rgb(15, 127, 192);
+      padding: .3rem;
+      font-size: .7rem;
+      font-weight: 600;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+.nav-right .theme-switch {
+  display: flex;
+  margin-left: 1rem;
+}
+
+/***
+Delete button
+****/
+.notification-card .deleteM {
+  border: none;
+  color: rgb(34, 41, 43);
+  background: rgb(190, 184, 184);
+  font-size: .7rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+  </style>
+
+  
+  
+<!---BOTTOM-NAV-STYLE-->
+  <style>
+
+    :root{
+  --darkMode-bg-cl: rgb(10, 10, 10);
+  --darkMode-bg-cl-2: rgb(10, 1, 22);
+  --welcome-card-bg: rgba(3, 3, 3, 0.918);
+  --welcome-card-bg-1: rgb(2, 2, 39);
+    }
+    .bottom-navbar{
+      width: 100%;
+      max-width: 900px;
+      height: 4.3rem;
+      position: fixed;
+      justify-self: center;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      gap: .3rem;
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:.1rem .1rem;
+      background: white;
+      overflow-x: hidden;
+      border-top: 1px solid rgb(240, 238, 238);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .dark-mode .bottom-navbar{
+      background: var(--darkMode-bg-cl);
+      border-top: 1px solid rgb(26, 24, 24);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+
+
+    .bottom-navbar .btom-navIcon{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 25%;
+      gap: .3rem;
+      height: 99%;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  outline: none;
+  -ms-user-select: none;;
+  user-select: none;
+    }
+
+    .btom-navIcon .activeImg{
+      padding: .19rem 1.16rem;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      border-radius: .9rem;
+      -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  outline: none;
+  -ms-user-select: none;;
+  user-select: none;
+    }
+
+    .activeImg.active{
+    background: rgb(212, 211, 211);
+    }
+
+    .dark-mode .activeImg.active{
+      background: rgba(143, 140, 140, 0.774);
+    }
+
+
+
+    .activeImg img{
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+
+  .activeImg .pin{
+    width: 2rem;
+    height: 1.8rem;
+    margin-bottom: -.3rem;
+  }
+
+
+
+    .btom-navIcon .bottomIcon-textNav{
+      font-size: .76rem;
+      font-weight: 700;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb(116, 116, 117);
+    }
+
+    .dark-mode .btom-navIcon .bottomIcon-textNav{
+      color: white;
+      opacity: .7;
+    }
+
+  .gridCard-wrapper{
+    margin-bottom: 3rem;
+  }
+  </style>
+ <!---ECOSHOP-FIXED-=BUTTON-->
+    <style>
+
+      .ecodataShopBtn{
+        width: 100%;
+        height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background: transparent;
+        bottom: 4rem;
+        z-index: 99999999;;
+      }
+      .shop-fixedBtn{
+        width: 3.2rem;
+        height: 3.2rem;
+        position: fixed;
+        padding: .4rem;
+        bottom: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+        background: rgb(245, 223, 200);
+        border-radius: 50%;
+        z-index: 99999999999999;
+        cursor: pointer;
+        border: 1px solid  white;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+
+      .shop-fixedBtn img{
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+<nav class="navbar">
+<div class="nav-left">
+<a href="index.html">
+  <img class="log" src="./css/icons/icon-shortcut.png" alt="image" loading="lazy">
+</a>
+</div>
+<div class="nav-right">
+
+ 
+ 
+ <!---DARK MODE-->
+<label class="theme-switch">
+  <input type="checkbox" id="themeToggle">
+  <span class="slider">
+    <span class="icon sun"><img src="./css/icons/sun2 (1).png" alt="images"></span>
+    <span class="icon moon"><img src="./css/icons/moon2.png" alt="images"></span>
+  </span>
+</label>
+
+<img id="cardToggler" src="./css/icons/menu-icon.png" alt="image" class="menu-icon" loading="lazy" style="background: none ;">
+
+<img id="menuDarkMode" class="menu-icon" src="./css/icons/menu-white.png" alt="image" style="background: none;">
+</div>
+</nav>
+
+<!----MAIN-NOTIFICATION-CONTAINER-->
+<div class="notification-container">
+  <div class="noti-wrap">
+      <div class="noti-title">
+    <h1>Notifications</h1>
+  </div>
+
+  <!--noti 1-->
+<!---noti 3-->
+<div class="notification-card">
+  <div class="noti-top">
+    Not Received Order Reporting
+  </div>
+  <div class="noti-middle">
+    Please when your placed order is delivered and still not received or reflected, don't hesitate to chat Admin by using admin chatButton at homePage. Reporting should be within 24hrs with the following: <br>
+    1. Order ID <br>
+    2. Number <br>
+    3. GB
+  </div>
+  <div class="noti-bottom">
+    <div class="noti-bottoml">
+      Admin signed ✔
+    </div>
+    <div class="noti-bottomR">
+      
+    </div>
+  </div>
+</div>
+
+<!---noti 2-->
+<div class="notification-card">
+  <div class="noti-top">
+    New Update
+  </div>
+  <div class="noti-middle">
+    The price of both MTN DATA Offers has changed. 
+    Now Each Offer has its own Data Prices because each DAta Offer carries different prices on the Portal.
+  </div>
+  <div class="noti-bottom">
+    <div class="noti-bottoml">
+      Admin signed ✔
+    </div>
+    <div class="noti-bottomR">
+       
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+<!---wrapper-div-->
+  </div>
+  <!---main-container-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="foot">
+   <div class="foot-content">
+    <div class="cop-right">
+        <p style="text-align:center;color:#888;font-size:14px;">© 2026 Ecodata. All rights reserved.
+      </p>
+    </div>
+      <small class="powered">
+        
+      <strong>Powered by:</strong>   IA E-Business 
+    </small>
+  
+   </div>
+  </section>
+
+
+
+
+<!------MENU-CARD----->
+<div class="menu-card-container" id="closeCard">
+       <div class="link">
+       <a href="terms.html">
+        <img src="./css/icons/terms (1).png" alt="image" loading="lazy">
+        <span>Terms of use</span>
+       </a>
+      </div>
+
+
+       <div class="link">
+       <a href="bundlesInfo.html">
+        <img src="./css/icons/list.jpg" alt="image" loading="lazy">
+        <span>Bundles info</span>
+       </a>
+      </div>
+
+      
+       <div class="link">
+       <a href="./ecdoataStore/ecoshop.html">
+        <img src="./css/icons/logoImg.jpeg" alt="image" loading="lazy">
+        <span>EcoData Store</span>
+       </a>
+      </div>
+
+      <div class="link">
+       <a href="./afa.html">
+        <img src="./css/icons/personal.png" alt="image" loading="lazy">
+        <span>MTN AFA</span>
+       </a>
+      </div>
+
+        <div class="link">
+       <a href="./pay.html">
+        <img src="./css/icons/agent.png" alt="image" loading="lazy">
+        <span>Register as Agent</span>
+       </a>
+      </div>
+
+
+
+      <div class="menu-ranking-links">
+        <!--WHATSAPP GROUP-->
+      <a href="https://www.tiktok.com/@ecodata247?_r=1&_d=ei9853mf1g8eec&sec_uid=MS4wLjABAAAAiY9nBAfFbpbd7KRl0y4-JTcRL0WMtPt9Pr-FKt__N-hQvmFZLhhInTTpn7Y5oRos&share_author_id=7484812520763950088&sharer_language=en&source=h5_m&u_code=ejcbk20728bd87&utm_source=copy&utm_campaign=client_share&share_link_id=d9108b99-2843-43f1-8f6c-ed4b72ea3264&share_app_id=1340&ugbiz_name=Account&lang=en&user_id=7484812520763950088&sec_user_id=MS4wLjABAAAAiY9nBAfFbpbd7KRl0y4-JTcRL0WMtPt9Pr-FKt__N-hQvmFZLhhInTTpn7Y5oRos&enable_checksum=1">
+      <button class="join-btn tiktok"><img src="./css/icons/tiktok.png" alt="">Tiktok</button>
+      </a>
+      <!--WHATSAPP GROUP-->
+      <a href="https://chat.whatsapp.com/LwhZNOyUQsJIGTQRL9cIXT?mode=hqrt3">
+      <button class="join-btn grp"><img src="./css/icons/whats.png" alt="" loading="lazy"> WhatsApp Group</button>
+      </a>
+      <!---WHATSAPP CHANNEL-->
+      <a href="https://whatsapp.com/channel/0029VbBgYfqAzNbpoZDtnq3o">
+      <button class="join-btn"><img src="./css/icons/whats.png" alt="" loading="lazy">Join WhatsApp Channel</button>
+      </a>
+      </div>
+
+       <a href="login.html">  <button  id="logout-btn" class="logout-btn">Sign-Up</button></a>
+
+       <button id="logOutBtn" class="log-out">Logout</button>   
+    </div>
+
+    
+<div class="what-group-btn">
+  <span class="informattion">Join</span>
+
+  <a href="https://chat.whatsapp.com/LwhZNOyUQsJIGTQRL9cIXT?mode=hqrt3">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring-delay"></div>
+  <img src="./css/icons/whats.png" alt="" loading="lazy">
+  </a>
+</div>
+
+  <!-- ✅ WhatsApp Floating Chat -->
+<div class="chatBox" id="whatsappChat">
+  <div id="chatButton" class="message">
+    <img src="./css/icons/chatMe.png" alt="image" loading="lazy">
+  </div>
+  <!---whatsapp chatBox-->
+  <div id="chatBox">
+    <h4>Chat Ecodata Admin</h4>
+    <input type="text" id="whatsappMessage" placeholder="Type your message..." />
+    <button id="sendMsgBtn">Send</button>
+  </div>
+</div>
+
+
+
+
+
+ <!-----BOTTOM-NAVBAR----->
+  <div class="bottom-navbar" id="navIconDiv">
+    <div class="btom-navIcon" onclick="window.location.href='index.html'">
+      <div class="activeImg " id="activeMtn">
+        <img src="./css/icons/home.png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav">Home</small>
+    </div>
+
+    
+   
+
+    <div class="btom-navIcon">
+      <div class="activeImg" onclick="window.location.href ='pay.html'"> 
+        <img class="pin" src="./css/icons/like.png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav">Get Discounts</small>
+    </div>
+
+
+     <div class="ecodataShopBtn" id="shopBtnFixed">
+       <div class="shop-fixedBtn" onclick="window.location.href='./ecdoataStore/welcomingPage.html'">
+    <img class="pin" src="./css/icons/logoImg.png" alt="" loading="lazy">
+    </div>
+   
+   </div>
+   
+
+
+      <div class="btom-navIcon" >
+      <div class="activeImg" id="activeTel" onclick="window.location.href='afa.html'"> 
+        <img class="pin" src="./css/icons/personal.png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav">AFA</small>
+    </div>
+
+
+     <div class="btom-navIcon" >
+      <div class="activeImg" id="activeAir" onclick="window.location.href='bundlesInfo.html'"> 
+        <img class="pin" src="./css/icons/terms (1).png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav"> Info</small>
+    </div>
+
+
+   
+
+
+  </div>
+
+
+
+
+<!----skeleton ui end div-->
+
+<script type="module" src="./js/main.js"></script>
+<script src="notification.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---MENU-CARD-JS-->
+<!---MENU-CARD-JS-->
+<script>
+document.addEventListener("DOMContentLoaded", ()=> {
+ const cardToggler = document.getElementById("cardToggler");
+ const secondToggler = document.getElementById("menuDarkMode");
+const cardCloser = document.getElementById("closeCard");
+
+  // toggle menucard
+  cardToggler.addEventListener("click", function(e) {
+    e.stopPropagation();
+    if(cardCloser.classList.contains("active")){
+      cardCloser.classList.remove("active");
+    } else{
+      cardCloser.classList.add("active");
+    }
+  });
+
+  // secondToggler
+  secondToggler.addEventListener("click", function(e) {
+    e.stopPropagation();
+
+    if(secondToggler) {
+      cardCloser.classList.add("active");
+    } else {
+      cardCloser.classList.remove("active");
+    }
+  })
+
+  // when ever clicked outside?
+  window.addEventListener("click", function(e) {
+    if(!cardCloser.contains(e.target) && !cardToggler.contains(e.target)) {
+      cardCloser.classList.remove("active");
+    }
+  })
+})
+
+ 
+
+
+</script>
+
+<!---HIDE MULTIPLE DIV--->
+
+
+
+
+
+<!-----DARK-MODE JS-->
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const savedTheme = localStorage.getItem("theme");
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      document.body.classList.add("dark-mode");
+      toggle.checked = true;
+    } else {
+      document.body.classList.remove("dark-mode");
+      toggle.checked = false;
+    }
+  }
+
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(systemPrefersDark ? "dark" : "light");
+  }
+
+  toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+      localStorage.setItem("theme", "dark");
+      applyTheme("dark");
+    } else {
+      localStorage.setItem("theme", "light");
+      applyTheme("light");
+    }
+  });
+
+  // Auto-change if system theme changes and user has no preference
+  window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+    if (!localStorage.getItem("theme")) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
+});
+</script>
+
+
+
+
+
+
+
+<!---skeleton js-->
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.remove("loading");
+  });
+</script>
+
+
+</body>
+</html>

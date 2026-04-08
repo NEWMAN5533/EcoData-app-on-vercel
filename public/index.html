@@ -1,0 +1,3280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <meta name="google-site-verification" content="uPuuYtdufpe-I9fBtT046jnMoZO7yvAEzEyCemHr1S0" />
+
+  <meta name="title" content="EcoData">
+  <meta name="description" content="Ecodata lets you buy affordable data bundles for MTN, Telecel & AirtelTigo with Fast delivery, Secure Payment, and the best discount in Ghana. Shop affordable data packages for browsing, streaming, and more on Ecodata">
+  <title>EcoData</title>
+
+
+  <!---shortcut-icon-->
+  <link rel="shortcut icon" href=".\css/icons/icon-shortcut.png" type="image/png">
+
+  <!---ICO-->
+  <link rel="shortcut icon" href=".\css/icons/favicon-ico.png" type="image/png">
+
+<!---FULL-OPEN-GRAPH-->
+<meta property="og:title" content="Buy Cheap Data Bundles in Ghana on Ecodata Website">
+<meta property="og:description" content="Affordable MTN, Telecel & AirtelTigo data bundles. Reliable, Fastest-delivery, and secure paystack payment.">
+<meta property="og:url" content="https://ecodata-app.onrender.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EcoData">
+
+
+<!----GOOGLE-SITE-SEARCH-ENDS-->
+
+
+  <!---css-link-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleGlobal.css">
+
+<!---LOADER CARD---->
+<style>
+  .packages small{
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    margin-right: .3rem;
+    border-radius: 50%;
+    animation: changeSeen 2s infinite;
+  }
+
+  @keyframes changeSeen {
+    0%{
+      background: rgb(255, 145, 0);
+    }
+    25%{
+      background: rgb(255, 187, 0);
+    }
+    50%{
+      background: rgb(255, 102, 0);
+    }
+    75%{
+      background: yellow;
+    }
+    100%{
+      background: rgb(255, 81, 0);
+    }
+  }
+</style>
+
+<style>
+   .loader-card img{
+    width: 2.5rem;
+    height: 1.9rem;
+    margin-bottom: -.9rem;
+  }
+
+  .loader-card p{
+    font-weight: 600;
+    color: rgb(224, 226, 226);
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+/***
+LOADING SPINNER
+****/
+.paystack-loader{
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  z-index: 999999;
+  align-items: center;
+}
+
+#paystackLoader{
+  backdrop-filter: blur(1px);
+  background:  rgb(39, 37, 37);
+  z-index: 999999;
+  overflow: hidden;
+}
+
+.paystack-loader.hidden{
+  display: none;
+}
+
+.loader-card {
+  background: rgb(39, 37, 37);
+  padding: 20px 40px;
+  border-radius: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: .9rem;
+  animation: scaleIn .25s ease;
+  z-index: 999999999999;
+}
+
+.spinner{
+    width: 29px;
+    height: 29px;
+    border: 3.5px solid rgb(147, 149, 150);
+    border-top: 3.5px solid transparent;
+    border-radius: 50%;
+    animation: spin .9s linear infinite;
+    display: flex;
+}
+
+
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/***
+LOADING SPINNER
+****/
+
+</style>
+
+<style>
+  .playVideo{
+    width: 100%;
+    max-width: 370px;
+    height: 9.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid;
+    padding-top: 1rem;
+    margin-bottom: 7rem;
+    position: relative;
+  }
+
+  .playVideo .play-title{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+  }
+
+  .play-title h2{
+    color: rgb(55, 55, 61);
+    font-size: .9rem;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .playVideo .video-div{
+    width: 100%;
+    max-width: 370px;
+    height: max-content;
+    padding: .4rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    gap: 1rem;
+  }
+
+  .video{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+  }
+
+  .video-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: .2rem;
+    border-radius: 4px;
+    border: 1px solid rgb(219, 213, 213);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .video-box .viTitle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: .2rem;
+    height: 2rem;
+    justify-content: center;
+    text-align: center;
+  }
+</style>
+
+
+<!----USERS ANIMATION---->
+<style>
+      #usedBy{
+       animation: spark 6s linear infinite;
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       display: flex;
+       line-height: 1;
+       font-size: .68rem;
+       border-radius: 6px;
+      }
+
+      @keyframes spark {
+        0% {
+          background: linear-gradient(135deg, rgb(50, 92, 92),rgb(94, 156, 151));
+          color: rgb(245, 244, 244);
+        }
+        25% {
+        background: linear-gradient(135deg, rgb(50, 92, 92),rgb(94, 156, 151));
+          color: rgb(15, 179, 124);
+        }
+        75% {
+          background: linear-gradient(135deg, rgb(45, 80, 80),rgb(94, 156, 151));
+          color: rgb(12, 25, 31);
+        }
+        100% {
+          background: linear-gradient(135deg, rgb(50, 92, 92),rgb(94, 156, 151));
+          color: rgb(248, 248, 248);
+        }
+      }
+</style>
+
+<!---SIGNUP MODAL---->
+<style>
+  
+ 
+
+
+.signup-modal{
+  position: fixed;
+  inset:0;
+  background: rgba(0,0,0,0.1);
+  backdrop-filter: blur(px);
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999999999;
+  opacity: 0;
+  pointer-events:none;
+  transition:0.4s;
+}
+
+.signup-modal.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.signup-box{
+  background:rgb(248, 248, 248);
+  width:340px;
+  height: 430px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding:18px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:0 12px 36px rgba(117, 117, 117, 0.7);
+  transform:translateY(30px);
+  transition:0.4s;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.dark-mode .signup-box{
+  background: var(--welcome-card-bg-1);
+  border: 2px solid var(--thin-border);
+ box-shadow:0 12px 36px rgba(80, 80, 80, 0.3);
+}
+
+.signup-box .signup-box-top{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.signup-box-top span{
+  width: 1.2rem;
+  height: 1.2rem;
+  background: rgb(236, 60, 60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.13);
+}
+
+.signup-box img{
+  width: 5rem;
+  height: 5rem;
+ box-shadow: 10px 10px 25px #e9e7e7, -10px -10px 25px #dbdada;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+.dark-mode .signup-box-top img{
+  border: 1px solid var(--thin-border);
+  box-shadow: 0 2px 6px rgba(24, 24, 24, 0.18);
+
+}
+
+
+.short-wrap{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+  background: rgba(32, 56, 53, 0.041);
+  padding:  .5rem;
+  border-radius: 8px;
+  box-shadow: 10px 10px 25px #e9e7e7, -10px -10px 25px #dbdada;
+  border: 2px solid white;
+}
+
+.dark-mode .short-wrap{
+ box-shadow:  0 12px 16px var(--welcome-card-bg-1);
+  border: 2px solid var(--thin-border);
+}
+
+.signup-modal.active .signup-box{
+  transform:translateY(0);
+}
+
+.signup-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-direction: column;
+}
+
+.signup-header small{
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(255, 136, 0);
+}
+
+
+.signup-header h2 img{
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  box-shadow: none;
+  animation: waveMe 2s infinite;
+}
+
+@keyframes waveMe  {
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+.dark-mode .signup-header h2 img{
+  width: 1.7rem;
+  height: 1.7rem;
+  border: none;
+  box-shadow: none;
+}
+
+.signup-header h2{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  white-space: nowrap;
+  background: #0066ff46;
+  padding: .3rem 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 0 2px 6px rgba(66, 66, 66, 0.1);
+}
+
+.signup-header span{
+  font-size:22px;
+  cursor:pointer;
+}
+
+.signup-text{
+  background: rgba(17, 94, 77, 0.137);
+  padding: .3rem;
+  margin-top:10px;
+  font-size:18px;
+  font-weight: 600;
+  color:#4a5555;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(66, 66, 66, 0.1);
+}
+
+.dark-mode .signup-text {
+  color: rgb(240, 238, 238);
+  background: rgba(17, 94, 77, 0.274);
+  border: 1px solid rgb(59, 71, 88);
+}
+
+.signup-text b{
+  color: rgb(9, 145, 116);
+}
+
+.dark-mode .signup-text b{
+  color: rgb(91, 192, 196);
+}
+
+.signup-actions{
+  margin-top:20px;
+  display:flex;
+  gap:40px;
+  justify-content:center;
+}
+
+#createAccountBtn{
+  background:rgb(223, 151, 17);
+  color:white;
+  border:none;
+  padding:10px 21px;
+  border-radius:4px;
+  cursor:pointer;
+  box-shadow: 0 2px 6px rgba(66, 66, 66, 0.1);
+  transition: .2s ease;
+}
+
+#createAccountBtn:hover{
+background:rgb(243, 159, 4);
+}
+
+#loginBtn{
+  background:#0f8669;
+  border:none;
+  color: white;
+  padding:10px 23px;
+  border-radius:4px;
+  cursor:pointer;
+  box-shadow: 0 2px 6px rgba(66, 66, 66, 0.1);
+  transition: .2s ease;
+}
+
+#loginBtn:hover{
+  background:#0ebb90;
+}
+
+
+  
+</style>
+
+
+<!---BOTTOM-NAV-STYLE-->
+  <style>
+
+    :root{
+  --darkMode-bg-cl: rgb(10, 10, 10);
+  --darkMode-bg-cl-2: rgb(10, 1, 22);
+  --welcome-card-bg: rgba(3, 3, 3, 0.918);
+  --welcome-card-bg-1: rgb(2, 2, 39);
+    }
+    .bottom-navbar{
+      width: 100%;
+      max-width: 900px;
+      height: 4.3rem;
+      justify-self: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      gap: .3rem;
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:.1rem .1rem;
+      background: white;
+      overflow-x: hidden;
+      border-top: 1px solid rgb(240, 238, 238);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .dark-mode .bottom-navbar{
+      background: var(--darkMode-bg-cl);
+      border-top: 1px solid rgb(36, 34, 34);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+
+
+    .bottom-navbar .btom-navIcon{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 25%;
+      gap: .3rem;
+      height: 99%;
+      cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  outline: none;
+  -ms-user-select: none;;
+  user-select: none;
+    }
+
+    .btom-navIcon .activeImg{
+      padding: .19rem 1.16rem;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      border-radius: .9rem;
+    -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  outline: none;
+  -ms-user-select: none;;
+  user-select: none;
+    }
+
+    .activeImg.active{
+    background: rgb(227, 230, 228);
+    }
+
+    .dark-mode .activeImg.active{
+      background: rgba(36, 58, 44, 0.493);
+    }
+
+
+
+    .activeImg img{
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+
+  .activeImg .pin{
+    width: 2rem;
+    height: 1.8rem;
+    margin-bottom: -.3rem;
+  }
+
+
+
+    .btom-navIcon .bottomIcon-textNav{
+      font-size: .76rem;
+      font-weight: 700;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb(116, 116, 117);
+    }
+
+    .dark-mode .btom-navIcon .bottomIcon-textNav{
+      color: white;
+      opacity: .7;
+    }
+
+  .gridCard-wrapper{
+    margin-bottom: 3rem;
+  }
+  </style>
+
+  <!---ECOSHOP-FIXED-=BUTTON-->
+    <style>
+
+      .ecodataShopBtn{
+        width: 100%;
+        height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background: black;
+        bottom: 4rem;
+        z-index: 99999999;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        outline: none;
+        -ms-user-select: none;;
+        user-select: none;
+      }
+      .shop-fixedBtn{
+        width: 3.4rem;
+        height: 3.4rem;
+        position: fixed;
+        padding: .4rem;
+        bottom: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+        background: rgb(245, 223, 200);
+        border-radius: 50%;
+        z-index: 99999999999999;
+        cursor: pointer;
+        border: 1px solid  white;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        outline: none;
+        -ms-user-select: none;;
+        user-select: none;
+      }
+
+      .shop-fixedBtn img{
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+
+    </style>
+
+    <style>
+  .businessInfo{
+    width: 100%;
+    height: 3rem;
+    padding: 1rem;
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+  }
+
+  .businessInfo span{
+    color: rgb(56, 56, 63);
+    font-size: 18px;
+  }
+
+  .dark-mode .businessInfo span{
+    color: rgb(115, 115, 122);
+  }
+
+  .businessInfo .businessInfo-right {
+display: flex;
+align-items: center;
+text-align: center;
+position: relative;
+width: 50%;
+  }
+
+  .businessInfo-right p{
+    font-size: .6rem !important;
+    white-space: nowrap;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+   .businessInfo .businessInfo-powered{
+display: flex;
+align-items: center;
+text-align: center;
+position: relative;
+width: 50%;
+   }
+   
+
+ .businessInfo-powered{
+  font-size: .6rem;
+  white-space: nowrap;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(82, 82, 87);
+ }
+
+ .dark-mode .businessInfo-powered {
+  color: white;
+ }
+
+ .businessInfo-powered strong{
+  margin-right: .4rem;
+ }
+</style>
+
+</head>
+<body>
+
+
+
+
+
+
+
+<nav class="navbar">
+<div class="nav-left">
+<a href="index.html">
+  <img class="log" src="./css/icons/icon-shortcut.png" alt="image" loading="lazy">
+</a>
+</div>
+<div class="nav-right">
+
+  <a href="notification.html">
+     <div class="notis">
+    <img class="notifity" src="./css/icons/notify (1).png" alt="" loading="lazy" style="display: none;">
+    <span id="notifyCount">2</span>
+  <img class="notifity" hidden
+   src="./css/icons/notify (3).png" alt="" loading="lazy">
+  </div>
+  </a>
+ 
+ 
+ <!---DARK MODE-->
+<label class="theme-switch">
+  <input type="checkbox" id="themeToggle">
+  <span class="slider">
+    <span class="icon sun"><img src="./css/icons/sun2 (1).png" alt="images" loading="lazy"></span>
+    <span class="icon moon"><img src="./css/icons/moon2.png" alt="images" loading="lazy"></span>
+  </span>
+</label>
+
+<img id="cardToggler" src="./css/icons/menu-icon.png" alt="image" class="menu-icon" loading="lazy" style="background: none ;">
+
+<img id="menuDarkMode" class="menu-icon" src="./css/icons/menu-white.png" alt="image" style="background: none;">
+</div>
+</nav>
+
+
+
+
+
+<!-------main-section-container-->
+
+
+  <!-----PRODUCT-WRAPPER-->
+  
+<!------MAIN SECTION----->
+<section class="card-container">
+<div class="welcome-card">
+  <div class="welcome-top">
+    <div class="welcome-top-leftside">
+      <p id="usernameDisplay"></p>
+      
+    </div>
+    <div class="welcome-top-right">
+      <input type="text" placeholder=" EcoData " readonly>
+    </div>
+  </div>
+  <div class="welcome-bottom">
+    <div class="close-time">
+    
+    <span><small class="dotter"></small> Active 24/7</span>
+  </div>
+    <div id="clock"></div>
+  </div>
+</div>
+
+
+<!-----COUNTER-ENDS--->
+
+<!----TRUSTED-MESSAGE-->
+<section class="trusted-by">
+  <div class="trusted-container">
+    <div class="wrapper-notice">
+      <div id="usedBy" class="left-tu">
+        1.01k+ Users
+      </div>
+      <span class="trusted-badge"> Verified Platform</span>
+    </div>
+
+
+   
+
+    <p class="trusted-text">
+      Used daily across Ghana <img src="./css/icons/flag3.jpg" alt="flag" loading="lazy"> 
+    </p>
+
+    <div class="trusted-logos">
+    <div class="trust">
+        <img src="./css/images/mtn-badge2.jpg" alt="MTN" loading="lazy">
+      MTN
+    </div>
+     <div class="trust">
+       <img src="./css/images/telecel.jpg" alt="Vodafone" loading="lazy">
+      Telecel
+     </div>
+     <div class="trust">
+       <img src="./css/images/tigo.jpg" alt="AirtelTigo" loading="lazy">
+      AirtelTigo
+     </div>
+      <div class="trust pay">
+        <img class="icont-secure" src="./css/icons/icons-secure.png" alt="Secure-icon" loading="lazy">
+      Secured Payment
+      </div>
+    </div>
+  </div>
+  <div class="baw-right">
+   <img src="./css/images/baw.png" alt="" loading="lazy">
+  </div>
+
+</section>
+
+<!---ENDS-->
+<!---SCROLL THUMBNAIL--REUSABLE--CARD ADS-->
+<div class="google-thumbnails-wrapper">
+  <div class="google-thumbnails" id="thumbnailScroll">
+
+
+
+<div class="google-thumbnail thumb2">
+  <img class="analy" src="./css/uiIcons/loudspeaker.png" alt="" loading="lazy">
+    [ MON 30, MARCH ] DELIVERY IS FASTER ON EXPRESS DATA NOW ( Recommended ) THANK YOU <img class="fol" src="./css/uiIcons/approval.png" alt="" loading="lazy" style="margin-left: .6rem;">
+    </div>
+
+  <div class="google-thumbnail thumb1">
+      <img class="fol" src="./css/uiIcons/star.png" alt="" loading="lazy"> WELCOME TO OUR PLATFORM <img class="fol" src="./css/uiIcons/star.png" alt="" loading="lazy"> We're glad to have you here!<img class="fol" src="./css/uiIcons/approval.png" alt="" loading="lazy"> <span style="color: #cf8d11; margin-left: 0.4rem;
+      ">Discover</span> fast,reliable, and affordable services designed just for you <img class="fol" src="./css/uiIcons/approval.png" alt="" loading="lazy"> <span style="color: #cf8d11; margin-left: 0.4rem; ">Whether</span> you're here to purchase data bundle, explore our offers, or manage your account - we've made everything simple and seamless <img class="fol" src="./css/uiIcons/gurantee.png" alt="" loading="lazy"> 
+      <span style="color: #cf8d11; margin-left: 0.4rem;">Get started</span> and enjoy a better digital experience.
+  </div>
+
+
+
+    <div class="google-thumbnail thumb2">
+      <img style="height: 2.2rem !important; width: 2.2rem !important;" class="analy" src="./css/icons/logoImg.png" alt="" loading="lazy">
+      <span style="color: rgb(255, 136, 0); margin-right: .4rem;">ECOSHOP</span> is UNDER DEVELOPMENT, OUR Team is WORKING ON IT. <span style="color: #0ebb90; margin-left: .4rem;"> FEEL FREE TO BUY YOUR DATA BUNDLE ANYTIME.</span>
+    </div>
+
+
+
+    
+    <div class="google-thumbnail thumb1">
+      <img class="fol" src="./css/uiIcons/approval.png" alt="" loading="lazy">
+      IF YOU SEE <span style="color:rgb(9, 145, 116);">APPLICATION LOADING</span> WHEN LAUNCHING THE APP, KINDLY BE PATIENT AND LET IT RUN FOR SECURITY PURPOSES. 
+    </div>
+
+
+<div class="google-thumbnail thumb2">
+  <img class="analy" src="./css/uiIcons/loudspeaker.png" alt="" loading="lazy">
+    Unlock Premium price Page by paying a one-time payment of 100 cedis!, and pay less than regular...
+    </div>
+
+    
+    <div class="google-thumbnail thumb1">
+      <img class="fol" src="./css/icons/personal.png" alt="" loading="lazy">Register MTN AFA, AND TALK MORE WITH FRIENDS AND FAMILIES, [BETTER THAN MARSH-UP ],  Dial *1848# TO buy AFA BUNDLES after activating"
+    </div>
+
+
+
+
+    
+
+    <div class="google-thumbnail thumb2" >
+      <img class="analy" src="./css/uiIcons/approval.png" alt="" loading="lazy">
+    You Can Now Buy Data At AnyTime! "No Closing Time" , (24h-hours Service Updated ).
+    </div>
+
+    
+
+
+
+        <div class="google-thumbnail thumb2" ><img class="folMarket" src="./css/uiIcons/loudspeaker.png" alt="" loading="lazy">
+      We're bringing our real products shopping page from our trusted sellers soon! / You can shop where ever you are nationwide delivery. Secured and powered by IA E-BUSINESS.
+    </div>
+
+
+        <div class="google-thumbnail thumb1"><img  class="folshare" src="./css/icons/whats_admin.png" alt="" loading="lazy">
+      You can share the Website link with friends and families by clicking the share button.
+    </div>
+
+  
+    <div class="google-thumbnail thumb2">
+      <img src="./css/icons/chatMe.png" alt="" loading="lazy">
+          Report any order with status updated as DELIVERED but still not  received with: Order ID, Number, and GB via admin chatButton within 8hrs.
+    </div>
+  </div>
+</div>
+<!---SCROLL THUMBNAIL--REUSABLE--CARD ADS----ends---->
+
+
+<!---NOTICE BOARD=-CONTAINER-->
+<section class="notice-container">
+  <img class="newy" src="./css/icons/icons8-new-year.gif" alt="new year" loading="lazy">
+ <div class="happy">
+ <h2>Happy New Year</h2><span>2026!</span>
+ </div>
+
+
+  <div class="notice-tag">
+    <div class="notice-text">
+      <h4>Important Notes</h4>
+    
+    </div>
+  </div>
+
+    <!----NOTICE-->
+    <div class="notice-board">
+      <div class="notice-top">
+        <small><span>1</span>Your Can Now Buy Data at <strong>AnyTime!</strong> No Closing Time.</small>
+      </div>
+
+      <div class="notice-top">
+        <small><span>2</span>Our services are running on <span>Render</span> <strong>that ensures security, and</strong> if you encounter <strong> Application Loading,</strong> please exercise patient.</small>
+      </div>
+    
+    
+
+        <div class="notice-top lapNone">
+        <small><span>3</span><strong>Install the App</strong> by adding to home screen.</small>
+      </div>
+
+      <div class="notice-top lapNone">
+        <small><span>4</span>Don't forget to click, <strong>"I have completed the payment"</strong> after successful <strong>Momo payment. </strong>That is <strong>(Very important).</strong></small>
+      </div>
+    </div>
+</section>
+
+<!----PERSISTENT-CARD-(ALWAYS-VISIBLE)--->
+<!-- LIVE ORDER CONTAINER -->
+ <section class="follow-share-container">
+ <div class="social-follow">
+  <div class="follow-left">
+   <small>Click to Follow :</small>
+  </div>
+
+  <div class="follow-right" style="gap: 2.2rem;">
+
+     <a href="https://chat.whatsapp.com/LwhZNOyUQsJIGTQRL9cIXT?mode=hqrt3" > <img src="./css/icons/whats.png" alt="facebook-logo" loading="lazy"></a>
+
+ <a href="https://m.me/cm/AbZ-WlUIuuVhFZKK/?send_source=cm%3Acopy_invite_link" style="display: none;"> <img class="meg" src="./css/icons/messenger.png" alt="facebook-logo" loading="lazy"></a>
+
+  <a href="http://www.facebook.com/share/1NTDoNJtGW/"> <img src="./css/icons/faceb.png" alt="facebook-logo" loading="lazy"></a>
+
+    <a href="https://www.tiktok.com/@ecodata247?_r=1&_d=ei9853mf1g8eec&sec_uid=MS4wLjABAAAAiY9nBAfFbpbd7KRl0y4-JTcRL0WMtPt9Pr-FKt__N-hQvmFZLhhInTTpn7Y5oRos&share_author_id=7484812520763950088&sharer_language=en&source=h5_m&u_code=ejcbk20728bd87&utm_source=copy&utm_campaign=client_share&share_link_id=d9108b99-2843-43f1-8f6c-ed4b72ea3264&share_app_id=1340&ugbiz_name=Account&lang=en&user_id=7484812520763950088&sec_user_id=MS4wLjABAAAAiY9nBAfFbpbd7KRl0y4-JTcRL0WMtPt9Pr-FKt__N-hQvmFZLhhInTTpn7Y5oRos&enable_checksum=1"><img class="tikop" src="./css/icons/tiktok.png" alt="facebook-logo"></a>
+
+
+  </div>
+ </div>
+
+ <!----SHARE-BTN-->
+ <div class="pls-share">
+<button id="shareBtn" title="Share EcoData">Share</button>
+ </div>
+ </section>
+
+
+ <!---dashboard totals 0verview-->
+ <div class="daily-analytics">
+  <h4>Daily Analytics Overview</h4>
+ </div>
+ 
+<div id="homepageTotals" class="totals-container">
+  <div class="total-card">
+
+    <div class="total-card-top">
+      <small>Total Orders</small>
+      <img src="./css/icons/totalorder.png" alt="total-icon" loading="lazy">
+    </div>
+    <div class="total-card-bottom">
+      <p id="totalOrders">0</p>
+    </div>
+  </div>
+  <!---next-->
+  <div class="total-card">
+    <div class="total-card-top">
+      <small>Total Data</small>
+      <img src="./css/icons/totalData.png" alt="totalGB" loading="lazy">
+    </div>
+    <div class="total-card-bottom">
+      <p id="totalGB">0</p>
+    </div>
+  </div>
+  <div class="total-card">
+    <div class="total-card-top">
+      <small>Spent <span class="cedis">( GHS )</span></small>
+      <img src="./css/icons/totalspent.png" alt="spent-icon" loading="lazy">
+    </div>
+    <div class="total-card-bottom">
+      <p id="totalSpend">0</p>
+    </div>
+  </div>
+
+
+</div>
+<!---ends-->
+
+
+
+
+
+<!-- live order section -->
+
+<div class="live-order-wrp">
+  <div class="top-var">
+    <h4>Orders History</h4>
+    <small>Track all Orders</small>
+  </div>
+
+  <section id="liveOrderSection">
+    <!-- TABLE HEADER (FIXED) -->
+    <div class="live-order-header">
+      <span>Order ID</span>
+      <span>Bundle</span>
+      <span>Recipient</span>
+      <span>Status</span>
+    </div>
+
+    <div id="liveOrderCard" class="live-order-card">
+      <!-- SCROLLABLE BODY -->
+      <div id="liveOrderRows" class="live-order-body">
+        <p class="empty-state">No recent orders yet</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ends -->
+
+<!----dashboard-overview-->
+
+
+
+
+<!----ENDS-->
+
+
+
+
+<!---NEW UI UPDATE (20th-01-2026)--=[grid & normal ui-->
+<section class="normalGrid-container">
+
+  <!---title-->
+  <div class="normalTitle">
+    <h2>Select MTN Offer</h2>
+    <small>Choose from available MTN data offers.</small>
+    <p ><span>Note:</span>Each offer carries it data prices.</p>
+  </div>
+  <!---offer-select-options-->
+   <div class="custom-select">
+  <button class="select-btn" id="selectBtn">
+    Select Available MTN Offer
+    <span><img src="./css/icons/more.png.png" alt="dropdown" loading="lazy"></span>
+  </button>
+
+  <div class="select-dropdown" id="dropdownOffer">
+    <div class="optionDelevery" data-mode="normal">
+      <span >MTN DATA NORMAL DELIVERY ✔  </span>
+      <small>NON-EXPIRY</small>
+    </div>
+  
+    <div class="optionDelevery" data-mode="express">
+      <span>MTN DATA EXPRESS DELIVERY ✔</span>
+      <small>NON-EXPIRY</small>
+    </div>
+  </div>
+  <div id="offerDisplay"></div>
+</div>
+
+<!----choose grid 0r normal btn-->
+<div class="normalOrgridBtn-wrapping">
+  <div class="normalOrgridBtn">
+  <div class="mode-btn-wrapper">
+     <button class="mode-Btn active" id="normalModeBtn"><img src="./css/icons/list (1).png" alt="" loading="lazy"> List</button>
+  <button class="mode-Btn" id="gridModeBtn"><img src="./css/icons/grid.png" alt="" loading="lazy"> Grid</button>
+  </div>
+  </div>
+  <div class="packages">
+    <small></small>
+  <p id="bundleTitle">MTN Bundle</p>
+  </div>
+</div>
+</section>
+
+
+
+<!-----INDIVIDUAL SECTIONS-VIEW TOGGLE---->
+<!----NORMALVIEW-SECTION-->
+<section id="normalView" class="view active" >
+  <div class="top-dashboard">
+    <h2>MTN DATA BUNDLE</h2>
+    <button class="packs">16 Packages Available</button>
+  </div>
+  <div class="single-order">
+    <small class="bundleRecipient">Bundle Recipient Number</small>
+    <!---phone-input-here-->
+    <input class="normalInput" type="tel" placeholder=" 0241234567">
+    <small class="sel">Bundle</small>
+
+    <div class="custom-option">
+      <!---visible-btn-->
+      <button class="selection-btn" id="optionBtn">
+    Select bundle
+    <span><img src="./css/icons/more.png.png" alt="dropdown" loading="lazy"></span>
+  </button>
+  <!----option-card-->
+  <div class="dropwrapper">
+    <div class="option-dropdown" id="moveDown">
+      <div id="topOpt">
+              <!---select-1-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="1"
+  data-price="6">
+      <span>1GB</span>
+      <small>GHS 6</small>
+    </div>
+    <!---select-2-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="2"
+  data-price="12">
+      <span>2GB</span>
+      <small>GHS 12</small>
+    </div>
+    <!---select-3-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="3"
+  data-price="17">
+      <span>3GB</span>
+      <small>GHS 17</small>
+    </div>
+    <!---select-4-->
+      <div class="optionSelect" 
+  data-network="mtn"
+  data-size="4"
+  data-price="22">
+      <span>4GB</span>
+      <small>GHS 22</small>
+    </div>
+    <!---select-5-->
+    <div class="optionSelect"
+  data-network="mtn"
+  data-size="5"
+  data-price="26.50">
+      <span>5GB</span>
+      <small>GHS 26.50</small>
+    </div>
+    <!---select-6-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="6"
+  data-price="32.50">
+      <span>6GB</span>
+      <small>GHS 32.50</small>
+    </div>
+    <!---select-7-->
+      <div class="optionSelect"
+  data-network="mtn"
+  data-size="7"
+  data-price="37">
+      <span>7GB</span>
+      <small>GHS 37</small>
+    </div>
+    <!---select-8-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="8"
+  data-price="40">
+      <span>8GB</span>
+      <small>GHS 40</small>
+    </div>
+    <!---select-9-->
+     <!---EMPTY-FOR-9GB-->
+    <!---select-10-->
+      <div class="optionSelect" 
+  data-network="mtn"
+  data-size="10"
+  data-price="47">
+      <span>10GB</span>
+      <small>GHS 47</small>
+    </div>
+    <!---select-11-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="12"
+  data-price="60">
+      <span>12GB</span>
+      <small>GHS 60</small>
+    </div>
+    <!---select-12-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="15"
+  data-price="68">
+      <span>15GB</span>
+      <small>GHS 68</small>
+    </div>
+    <!---select-13-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="20"
+  data-price="91">
+      <span>20GB</span>
+      <small>GHS 91</small>
+    </div>
+    <!---select-14-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="25"
+  data-price="111">
+      <span>25GB</span>
+      <small>GHS 111</small>
+    </div>
+    <!---select-15-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="30"
+  data-price="130">
+      <span>30GB</span>
+      <small>GHS 130</small>
+    </div>
+    <!---select-16-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="40"
+  data-price="169">
+      <span>40GB</span>
+      <small>GHS 169</small>
+    </div>
+    <!---select-17-->
+    <div class="optionSelect"
+  data-network="mtn"
+  data-size="50"
+  data-price="215">
+      <span>50GB</span>
+      <small>GHS 215</small>
+    </div>
+    <!---select-ends-->
+      </div>
+      <div id="bottomOpt" style="display: none;">
+              <!---select-1-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="1"
+  data-price="6.5">
+      <span>1GB</span>
+      <small>GHS 6.5</small>
+    </div>
+    <!---select-2-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="2"
+  data-price="12.5">
+      <span>2GB</span>
+      <small>GHS 12.5</small>
+    </div>
+    <!---select-3-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="3"
+  data-price="18">
+      <span>3GB</span>
+      <small>GHS 18</small>
+    </div>
+    <!---select-4-->
+      <div class="optionSelect" 
+  data-network="mtn"
+  data-size="4"
+  data-price="23">
+      <span>4GB</span>
+      <small>GHS 23</small>
+    </div>
+    <!---select-5-->
+    <div class="optionSelect"
+  data-network="mtn"
+  data-size="5"
+  data-price="27">
+      <span>5GB</span>
+      <small>GHS 27</small>
+    </div>
+    <!---select-6-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="6"
+  data-price="33">
+      <span>6GB</span>
+      <small>GHS 33</small>
+    </div>
+    <!---select-7-->
+      <div class="optionSelect"
+  data-network="mtn"
+  data-size="7"
+  data-price="38">
+      <span>7GB</span>
+      <small>GHS 38</small>
+    </div>
+    <!---select-8-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="8"
+  data-price="41">
+      <span>8GB</span>
+      <small>GHS 41</small>
+    </div>
+    <!---select-9-->
+     <!---empty-for-9GB-->
+    <!---select-10-->
+      <div class="optionSelect" 
+  data-network="mtn"
+  data-size="10"
+  data-price="48">
+      <span>10GB</span>
+      <small>GHS 48</small>
+    </div>
+    <!---select-11-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="12"
+  data-price="62">
+      <span>12GB</span>
+      <small>GHS 62</small>
+    </div>
+    <!---select-12-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="15"
+  data-price="70">
+      <span>15GB</span>
+      <small>GHS 70</small>
+    </div>
+    <!---select-13-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="20"
+  data-price="93">
+      <span>20GB</span>
+      <small>GHS 93</small>
+    </div>
+    <!---select-14-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="25"
+  data-price="113">
+      <span>25GB</span>
+      <small>GHS 113</small>
+    </div>
+    <!---select-15-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="30"
+  data-price="133">
+      <span>30GB</span>
+      <small>GHS 133</small>
+    </div>
+    <!---select-16-->
+    <div class="optionSelect" 
+  data-network="mtn"
+  data-size="40"
+  data-price="172">
+      <span>40GB</span>
+      <small>GHS 172</small>
+    </div>
+    <!---select-17-->
+    <div class="optionSelect"
+  data-network="mtn"
+  data-size="50"
+  data-price="219">
+      <span>50GB</span>
+      <small>GHS 219</small>
+    </div>
+    <!---select-ends-->
+      </div>
+  </div>
+
+  </div>
+
+  <!---selected-bundle-modal-here--->
+  <div class="selectedModal">
+    <div class="selectedModal-left">
+      <div class="selectedModal-left-left">
+        <span><img src="./css/icons/completed.png" alt="selectedData" loading="lazy"></span>
+      </div>
+      <div class="selectedModal-left-right">
+        <div class="placeHolderGB"></div>
+        <div class="placeHolderPrice"><small></small></div>
+      </div>
+    </div>
+    <div class="selectedModal-right">
+    </div>
+  </div>
+
+
+    </div>
+
+    <!---buy-btn-->
+    <button id="placeOrderBtn" class="buy-btn place-telbtn">
+     Place Order
+    </button>
+  </div>
+
+
+  <!---VIDEO-PLAY-SECTION----->
+  <section class="playVideo" style="display: none;">
+    <div class="play-title">
+      <h2>
+        Watch how to buy
+      </h2>
+    </div>
+      <div class="video-div">
+    
+        <div class="video-box">
+          <video class="video" autoplay muted loop>
+            <source src="./css/images/iphone-11pro-video.mp4" type="">
+          </video>
+          <!---video-title-->
+         <div class="viTitle">
+           <p>A complete data purchase video.mp4...</p>
+         </div>
+        </div>
+
+          <div class="video-box">
+              <video autoplay muted loop>
+            <source src="./css/images/iphone-11pro-video.mp4" type="">
+          </video>
+          
+           <!---video-title-->
+         <div class="viTitle">
+           <p>A complete data purchase video.mp4...</p>
+         </div>
+          </div>
+        </div>
+    
+        
+          
+      </div>
+  </section>
+ 
+
+
+  <section class="businessInfo">
+     <div class="businessInfo-right">
+        <p style="text-align:center;color:#888;font-size:14px;">© 2026 Ecodata. All rights reserved.
+      </p>
+    </div>
+    <span>|</span>
+      <small class="businessInfo-powered">
+        
+      <strong>Powered by:</strong>   IA E-Business 
+    </small>
+  </section>
+</section>
+<!----NORMALVIEW-SECTION-ENDS---->
+
+
+
+
+
+
+
+
+<!---GRIDvIEW-SECTION-->
+<section id="gridView" class="View " style="display: none;">
+  <!---all gridCards-here-->
+<!-----BUNDLE PROCESSING--->
+ <!---------NETWORK PURCHASED-DETAILS----->
+  <div class="networks-purchased-container">
+    <div class="purchase-title">
+     <h5>All Networks Packages</h5>
+    </div>
+    
+    <div class="purchase-container">
+  
+        <div class="card-box mtn mtnBt"><img src="./css/icons/mtn-signal.png" alt="img" loading="lazy"> MTN</div>
+     
+     
+        <div class="card-box telecel"><img src="./css/icons/telecel-signal.png" alt="img" loading="lazy"> Telecel</div>
+      
+     
+        <div class="card-box at"><img src="./css/icons/tigo-signal.png" alt="img" loading="lazy"> AirtelTigo</div>
+    </div>
+  </div>
+
+
+
+  
+
+ <!--hero-text-->
+  <div class="hero-text-container mtn" id="mtnArea">
+    <div class="hero-top-content">
+      <div class="top-left-content">
+       <a href="#">
+         <img src="./css/images/mtn-badge2.jpg" alt="images" loading="lazy">
+       </a>
+      </div>
+      <div class="top-right-content">
+        <h2>MTN Data Bundle</h2>
+        <small>Purchase MTN data bundles for single <br> or multiple recipients</small>
+      </div>
+    </div>
+    <div class="hero-bottom-content">
+      <div class="btn-div ">
+        16 Packages Available
+      </div>
+      <!----CARD-DIV---->
+      <div class="card-div">
+        <div class="network-card">
+          <div class="card-network-top">
+            <div class="left-card-content">
+              <img src="./css/images/mtn-badge2.jpg" alt="images" loading="lazy">
+            </div>
+            <div class="right-card-content">
+              <h2>MTN Data Bundle</h2>
+              <p class="bundle-info">
+                (Data). MTN Express data bundle
+              </p>
+            </div>
+          </div>
+          <div class="bottom-content">
+            <div class="details-network">
+              <span><small>.</small> 90 Days</span>
+              <span><small>.</small> Active</span>
+              <span><small>.</small> 18 Packages</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---SINGLE ORDER BTN-->
+          <div class="single-order-container">
+            <div class="modebtn">Mode</div>
+            <button class="modeN">Normal</button>
+            <button class="mode">Grid</button>
+          </div>
+    </div>
+  </div>
+  
+  <!----HERO ENDS-->
+
+<!-----NETWORK-BUNDLE-CARDS-MTN-CONTAINER---->
+  <!---CARDS SECTION-->
+    <section class="gridCards-container topMtn " id="bundles">
+      <!---GRID CARDS WRAPPER-->
+      <div class="gridCard-wrapper">
+      <!----------CARD----1------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>1GB</h3>
+          <small class="old-price">GHS 6</small>
+          <p class="new-price">GHS 5.50</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="1"
+  data-price="6"
+          > <img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+ <!----------NEXT CARD------2----->
+      <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>2GB</h3>
+            <small class="old-price">GHS 12</small>
+          <p class="new-price">GHS 11</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="2"
+  data-price="12"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+ <!----------NEXT CARD-------3---->
+      <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>3GB</h3>
+            <small class="old-price">GHS 17</small>
+          <p class="new-price">GHS 16</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="3"
+  data-price="17"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD----4------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>4GB</h3>
+            <small class="old-price">GHS 22</small>
+          <p class="new-price">GHS 21</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="4"
+  data-price="22"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD----5------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>5GB</h3>
+            <small class="old-price">GHS 26.50</small>
+          <p class="new-price">GHS 25</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="5"
+  data-price="26.50"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD---6-------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>6GB</h3>
+            <small class="old-price">GHS 32.50</small>
+          <p class="new-price">GHS 31</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="6"
+  data-price="32.50"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD---7-------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>7GB</h3>
+            <small class="old-price">GHS 37</small>
+          <p class="new-price">GHS 36</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="7"
+  data-price="37"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD-----8------>
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>8GB</h3>
+           <small class="old-price">GHS 40</small>
+          <p class="new-price">GHS 39</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="8"
+  data-price="40"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+
+       <!----------NEXT CARD----------->
+      <!---EMPTY-9GB-->
+       <!----------NEXT CARD---9-------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>10GB</h3>
+            <small class="old-price">GHS 47</small>
+          <p class="new-price">GHS 45</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="10"
+  data-price="47"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD---10-------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>12GB</h3>
+            <small class="old-price">GHS 60</small>
+          <p class="new-price">GHS 59</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="12"
+  data-price="60"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD-----11------>
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>15GB</h3>
+            <small class="old-price">GHS 68</small>
+          <p class="new-price">GHS 66</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="15"
+  data-price="68"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----12------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>20GB</h3>
+            <small class="old-price">GHS 91</small>
+          <p class="new-price">GHS 89</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="20"
+  data-price="91"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----13------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>25GB</h3>
+            <small class="old-price">GHS 111</small>
+          <p class="new-price">GHS 109</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="25"
+  data-price="111"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD---14------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>30GB</h3>
+            <small class="old-price">GHS 130</small>
+          <p class="new-price">GHS 128</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="30"
+  data-price="130"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD----15------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>40GB</h3>
+            <small class="old-price">GHS 169</small>
+          <p class="new-price">GHS 167</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="40"
+  data-price="169"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD---16-------->
+        <div class="gridCard">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>50GB</h3>
+            <small class="old-price">GHS 215</small>
+          <p class="new-price">GHS 213</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="50"
+  data-price="215"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD---17-------->
+        <div class="gridCard" style="display: none;">
+        <div class="gridCard-top">
+          <small>MTN </small>
+                  <img class="mt" src="./css/icons/mtn-signal.png" alt="mtn.icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>100GB</h3>
+            <small class="old-price">GHS 430</small>
+          <p class="new-price">GHS 420</p>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="mtn"
+  data-size="100"
+  data-price="430"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+
+
+
+
+
+
+      </div>
+    </section>
+
+
+
+
+
+
+<!--section-title-->
+ <!--hero-text-->
+  <div class="hero-text-container tel" id="teleArea">
+    <div class="hero-top-content">
+      <div class="top-left-content">
+       <a href="#">
+         <img src="./css/images/telecel.jpg" alt="images" loading="lazy">
+       </a>
+      </div>
+      <div class="top-right-content">
+        <h2>Telecel Data Bundle</h2>
+        <small>Purchase Telecel data bundles for single <br> or multiple recipients</small>
+      </div>
+    </div>
+    <div class="hero-bottom-content">
+      <div class="btn-div">
+        12 Packages Available
+      </div>
+       <!----CARD-DIV---->
+      <div class="card-div">
+        <div class="network-card">
+          <div class="card-network-top">
+            <div class="left-card-content">
+              <img src="./css/images/telecel.jpg" alt="images" loading="lazy">
+            </div>
+            <div class="right-card-content">
+              <h2>Telecel Data Bundle</h2>
+              <p class="bundle-info">
+                (Data). The 2Months Expiry bundle from Telecel
+              </p>
+            </div>
+          </div>
+          <div class="bottom-content">
+            <div class="details-network">
+              <span><small>.</small> 60 Days</span>
+              <span><small>.</small> Active</span>
+              <span><small>.</small> 12 Packages</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+
+        </div>
+      </div>
+  
+  <!----HERO ENDS-->
+<!-----NETWORK-BUNDLE-CARDS-TELECEL-CONTAINER---->
+
+   <!---CARDS SECTION-->
+    <section class="gridCards-container">
+      <!---GRID CARDS WRAPPER-->
+      <div class="gridCard-wrapper">
+         <!---------- CARD---1-------->
+      <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>2GB</h3>
+          <small>GHS 13</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="2"
+  data-price="13"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+
+       <!---------- CARD--2--------->
+      <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>3GB</h3>
+          <small>GHS 18.20</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="3"
+  data-price="18.20"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+
+      <!---------- CARD---3-------->
+      <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>5GB</h3>
+          <small>GHS 27.40</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="5"
+  data-price="27.40"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div> 
+ <!---------- CARD----4------->
+      <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>10GB</h3>
+          <small>GHS 46.20</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="10"
+  data-price="46.20"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+ <!----------NEXT CARD--5--------->
+      <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>15GB</h3>
+          <small>GHS 69</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="15"
+  data-price="69"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD--6--------->
+        <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>20GB</h3>
+          <small>GHS 90</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="20"
+  data-price="90"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD----7------->
+        <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>25GB</h3>
+          <small>GHS 110</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="25"
+  data-price="110"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD---8-------->
+        <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>30GB</h3>
+          <small>GHS 134</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="30"
+  data-price="134"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD----9------->
+  <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>35GB</h3>
+          <small>GHS 143</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="35"
+  data-price="143"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD-----10------>
+        <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>40GB</h3>
+          <small>GHS 175</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="40"
+  data-price="175"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD---11-------->
+        <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>50GB</h3>
+          <small>GHS 210</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="50"
+  data-price="210"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+
+       <!----------NEXT CARD---12-------->
+        <div class="gridCardTele">
+        <div class="gridCard-top">
+          <small>Telecel</small>
+        <img class="lecel" src="./css/icons/telecel-signal.png" alt="tele-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>100GB</h3>
+          <small>GHS 397</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="telecel"
+  data-size="100"
+  data-price="397"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      
+        
+
+      </div>
+    </section>
+
+
+
+
+
+<!--section-title-->
+<!--hero-text-->
+  <div class="hero-text-container tigo" id="tigoArea" >
+    <div class="hero-top-content">
+      <div class="top-left-content">
+        <img src="./css/images/tigo.jpg" alt="images" loading="lazy">
+      </div>
+      <div class="top-right-content">
+        <h2>AirtelTigo Data Bundle</h2>
+        <small>Purchase AirtelTigo data bundles for single <br> or multiple recipients</small>
+      </div>
+    </div>
+    <div class="hero-bottom-content">
+      <div class="btn-div">
+        17 Packages Available
+      </div>
+        <!----CARD-DIV---->
+      <div class="card-div">
+        <div class="network-card">
+          <div class="card-network-top">
+            <div class="left-card-content">
+              <img src="./css/images/tigo.jpg" alt="images" loading="lazy">
+            </div>
+            <div class="right-card-content">
+              <h2>AirtelTigo Data Bundle</h2>
+              <p class="bundle-info">
+                (Data). The instant data bundle from AT
+              </p>
+            </div>
+          </div>
+          <div class="bottom-content">
+            <div class="details-network">
+              <span><small>.</small> 60 Days</span>
+              <span><small>.</small> Active</span>
+              <span><small>.</small> 17 Packages</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+<!-----AIRTELTIGO SECTION---->
+<!-----NETWORK-BUNDLE-CARDS-TELECEL-CONTAINER---->
+  <!---CARDS SECTION-->
+    <section class="gridCards-container ">
+      <!---GRID CARDS WRAPPER-->
+      <div class="gridCard-wrapper">
+      <!----------CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>1GB</h3>
+          <small>GHS 7</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="1"
+  data-price="7"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+ <!----------NEXT CARD----------->
+      <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>2GB</h3>
+          <small>GHS 14</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="2"
+  data-price="14"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+ <!----------NEXT CARD----------->
+      <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>3GB</h3>
+          <small>GHS 18</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="3"
+  data-price="18"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>4GB</h3>
+          <small>GHS 23</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="4"
+  data-price="23"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>5GB</h3>
+          <small>GHS 28</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="5"
+  data-price="28"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>6GB</h3>
+          <small>GHS 31</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="6"
+  data-price="31"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+      <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>7GB</h3>
+          <small>GHS 35</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="7"
+  data-price="35"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>8GB</h3>
+          <small>GHS 39</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="8"
+  data-price="39"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>9GB</h3>
+          <small>GHS 44</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="9"
+  data-price="44"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>10GB</h3>
+          <small>GHS 47</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="10"
+  data-price="47"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>12GB</h3>
+          <small>GHS 56</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="12"
+  data-price="56"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>15GB</h3>
+          <small>GHS 63</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="15"
+  data-price="63"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>20GB</h3>
+          <small>GHS 89</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="20"
+  data-price="89"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>25GB</h3>
+          <small>GHS 110</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="25"
+  data-price="110"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>30GB</h3>
+          <small>GHS 132</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="30"
+  data-price="132"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>40GB</h3>
+          <small>GHS 170</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="40"
+  data-price="170"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+       <!----------NEXT CARD----------->
+        <div class="gridCardAirteltigo">
+        <div class="gridCard-top">
+          <small>Airtel</small>
+         <img class="airt" src="./css/icons/tigo-signal.png" alt="tigo-icon" loading="lazy">
+        </div>
+        <div class="gridCard-middle">
+          <h3>50GB</h3>
+          <small>GHS 210</small>
+        </div>
+        <div class="gridCard-bottom">
+          <button class="buy-btn"
+  data-network="at"
+  data-size="50"
+  data-price="210"
+          ><img src="./css/icons/totalorder.png" alt="img" loading="lazy"> Buy Now</button>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+</section>
+
+<!---GRIDvIEW-SECTION-ENDS---->
+
+
+<!---NEW UI UPDATE (20th-01-2026)--=[grid & normal ui--ends---->
+
+
+
+
+<!---CARD-CONTAINER-ENDS-->
+
+<!----REGISTRATION---->
+<div class="agent-upgrade-wrapper" style="display: none;">
+
+<div class="agent-upgrade">
+  <h2>Join for Exclusive Benefits</h2>
+  <img src="./css/icons/agent.png" alt=""loading="lazy">
+  <p>
+    Unlock discounted prices for personal use or reselling.
+    Pay a one-time registration fee of <strong>GHS 100</strong>
+    and start earning or saving more today.
+  </p>
+
+  <button onclick="goToPayment()">Upgrade Now</button>
+</div>
+</div>
+
+
+<script>
+  function goToPayment() {
+    window.location.href = "pay.html";
+  }
+</script>
+</section>
+
+
+
+
+
+
+
+
+<!-- Phone Input Modal -->
+<div id="phoneModal" class="modal">
+  <div class="modal-content">
+<!-----SELECTED-->
+      <div class="selected-div">
+    <h4>Selected Package Details</h4>
+    <div class="placeholders-wrapper">
+      <div class="placeholdersbtn-wrapper">
+              <small>Price</small>
+            <div class="placeholders-left"  id="priceTag">
+    </div>
+      </div>
+
+        <div class="placeholdersbtn-wrapper">
+          <small>Network/GB</small>
+            <div class="placeholders-right" id="networkTag">
+    </div>
+        </div>
+    </div>
+  </div>
+    <h3>Enter Bundle Recipient</h3>
+    <input 
+    type="tel"
+     id="recipientInput" 
+     placeholder="e.g. 0241234567"
+     maxlength="10"
+     inputmode="numeric"
+     required/>
+    <div class="modal-buttons">
+      <button id="cancelBtn" class="btn cancel">Cancel</button>
+      <button id="confirmBtn" class="btn continue">Proceed to Paystack</button>
+    </div>
+</div>
+</div>
+
+
+
+<!----SIDEBAR @1366PX-DES---------->
+<div class="notice-sidebar" >
+  <section class="topp">
+    <h2>User panel</h2>
+  </section>
+<div class="note-inner-container">
+
+   
+
+
+
+
+  <div class="agent-upgrade">
+  <h2>Join for Exclusive Benefits</h2>
+  <img src="./css/icons/agent.png" alt=""loading="lazy">
+  <p>
+    Unlock discounted prices for personal use or reselling.
+    Pay a one-time registration fee of <strong>GHS 100</strong>
+    and start earning or saving more today.
+  </p>
+
+  <button onclick="goToPayment()">Upgrade Now</button>
+</div>
+  </div>
+  <section class="bot"></section>
+
+</div>
+
+
+
+<!------MENU-CARD----->
+<div class="menu-card-container" id="closeCard">
+       <div class="link">
+       <a href="terms.html">
+        <img src="./css/icons/terms (1).png" alt="image" loading="lazy">
+        <span>Terms of use</span>
+       </a>
+      </div>
+
+
+       <div class="link">
+       <a href="bundlesInfo.html">
+        <img src="./css/icons/list.jpg" alt="image" loading="lazy">
+        <span>Bundles info</span>
+       </a>
+      </div>
+
+      
+       <div class="link">
+       <a href="./ecdoataStore/ecoshop.html">
+        <img src="./css/icons/logoImg.jpeg" alt="image" loading="lazy">
+        <span>EcoData Store</span>
+       </a>
+      </div>
+
+      <div class="link">
+       <a href="./afa.html">
+        <img src="./css/icons/personal.png" alt="image" loading="lazy">
+        <span>MTN AFA</span>
+       </a>
+      </div>
+
+        <div class="link">
+       <a href="./pay.html">
+        <img src="./css/icons/agent.png" alt="image" loading="lazy">
+        <span>Register as Agent</span>
+       </a>
+      </div>
+
+
+
+      <div class="menu-ranking-links">
+        <!--WHATSAPP GROUP-->
+      <a href="https://www.tiktok.com/@ecodata247?_r=1&_d=ei9853mf1g8eec&sec_uid=MS4wLjABAAAAiY9nBAfFbpbd7KRl0y4-JTcRL0WMtPt9Pr-FKt__N-hQvmFZLhhInTTpn7Y5oRos&share_author_id=7484812520763950088&sharer_language=en&source=h5_m&u_code=ejcbk20728bd87&utm_source=copy&utm_campaign=client_share&share_link_id=d9108b99-2843-43f1-8f6c-ed4b72ea3264&share_app_id=1340&ugbiz_name=Account&lang=en&user_id=7484812520763950088&sec_user_id=MS4wLjABAAAAiY9nBAfFbpbd7KRl0y4-JTcRL0WMtPt9Pr-FKt__N-hQvmFZLhhInTTpn7Y5oRos&enable_checksum=1">
+      <button class="join-btn tiktok"><img src="./css/icons/tiktok.png" alt="">Tiktok</button>
+      </a>
+      <!--WHATSAPP GROUP-->
+      <a href="https://chat.whatsapp.com/LwhZNOyUQsJIGTQRL9cIXT?mode=hqrt3">
+      <button class="join-btn grp"><img src="./css/icons/whats.png" alt="" loading="lazy"> WhatsApp Group</button>
+      </a>
+      <!---WHATSAPP CHANNEL-->
+      <a href="https://whatsapp.com/channel/0029VbBgYfqAzNbpoZDtnq3o">
+      <button class="join-btn"><img src="./css/icons/whats.png" alt="" loading="lazy">Join WhatsApp Channel</button>
+      </a>
+      </div>
+
+       <a href="./login.html">  <button  id="logout-btn" class="logout-btn">Sign-Up</button></a>
+
+       <button id="logOutBtn" class="log-out">Logout</button>   
+    </div>
+
+<!---LOADING-SPINNER-->
+<div id="paystackLoader" class="paystack-loader hidden" >
+  <div class="loader-card">
+    <div class="orbit-spinner">
+      <span class="spinner"></span>
+    </div>
+    <p>Preparing payment</p>
+    
+  </div>
+</div>
+<!----PAYSTACK-LOADER-->
+
+
+
+<!-----SIGN UP CARD SECTION----->
+<div id="signupModal" class="signup-modal" style="display: none;">
+
+  <div class="signup-box">
+   <div class="signup-box-top">
+     <img src="./css/icons/icon.bg.png" alt="" loading="lazy">
+     <span id="closeSignup">&times;</span>
+   </div>
+ <div class="short-wrap">
+  
+    <div class="signup-header">
+      <h2>Welcome to EcoData 
+        <img src="./css/icons/greetings.png" alt="" loading="lazy"></h2>
+     <small>Create an Account or <br>
+      <p style="margin: 0;color: rgb(12, 107, 107);font-size: 1.2rem;font-weight: 600;" class="lo">Login</p>
+     </small>
+    </div>
+
+    <div class="signup-text">
+      Create an account to enjoy <b>exclusive bundle prices</b> and faster checkout.
+    </div>
+
+ </div>
+    <div class="signup-actions">
+      <button id="createAccountBtn">Create Account</button>
+      <button id="loginBtn">Login</button>
+    </div>
+
+  </div>
+
+</div>
+<!-----SIGN UP CARD SECTION--ENDS--->
+
+
+<!----WHATSAPP-GROUP--FIXED-BUTTON----->
+<div class="what-group-btn">
+  <span class="informattion">Join</span>
+
+  <a href="https://chat.whatsapp.com/LwhZNOyUQsJIGTQRL9cIXT?mode=hqrt3">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring-delay"></div>
+  <img src="./css/icons/whats.png" alt="" loading="lazy">
+  </a>
+</div>
+
+<!----WHATSAPP-GROUP--FIXED-BUTTON----->
+
+
+
+
+  <section class="foot">
+   <div class="foot-content">
+    <div class="cop-right">
+       
+      </p>
+    </div>
+      <small class="powered">
+        
+     
+    </small>
+  
+   </div>
+  </section>
+  
+  <!---shop-fixed-button-->
+     
+  
+
+  
+  
+  <!-----BOTTOM-NAVBAR----->
+  <div class="bottom-navbar" id="navIconDiv">
+    <div class="btom-navIcon" onclick="window.location.href='index.html'">
+      <div class="activeImg active" id="activeMtn">
+        <img src="./css/icons/home.png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav">Home</small>
+    </div>
+
+    
+
+    <div class="btom-navIcon">
+      <div class="activeImg" onclick="window.location.href ='pay.html'"> 
+        <img class="pin" src="./css/icons/like.png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav">Get Discounts</small>
+    </div>
+
+   
+ 
+   
+
+      <div class="btom-navIcon" >
+      <div class="activeImg" id="activeTel" onclick="window.location.href='afa.html'"> 
+        <img class="pin" src="./css/icons/personal.png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav">AFA</small>
+    </div>
+
+
+     <div class="btom-navIcon" >
+      <div class="activeImg" id="activeAir" onclick="window.location.href='bundlesInfo.html'"> 
+        <img class="pin" src="./css/icons/terms (1).png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav"> Info</small>
+    </div>
+
+
+   
+
+
+  </div>
+
+ 
+
+  
+
+  <!-- ✅ WhatsApp Floating Chat -->
+<div class="chatBox" id="whatsappChat">
+  <div id="chatButton" class="message">
+    <img src="./css/icons/chatMe.png" alt="image" loading="lazy">
+  </div>
+  <!---whatsapp chatBox-->
+  <div id="chatBox">
+    <h4>Chat Ecodata Admin</h4>
+    <input type="text" id="whatsappMessage" placeholder="Type your message..." />
+    <button id="sendMsgBtn">Send</button>
+  </div>
+</div>
+
+<!---AUTO SCROLL-->
+<div class="floating-scroll">
+  <img src="./css/icons/more.png.png" alt="arrow-icon" loading="lazy">
+  <small>Scroll</small>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ <!-- Load Paystack library -->
+  <script src="https://js.paystack.co/v2/inline.js"></script>
+
+
+  
+
+
+<script type="module" src="./firebase-config.js"></script>
+
+<script type="module" src="./main.js"></script>
+
+
+
+
+<!--GREETINGS WITH-usernameDisplay----->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyClNBlfigtQk8AZWdMZcU9sEtVcIrS0D1g",
+  authDomain: "ecodata-2bee6.firebaseapp.com",
+  projectId: "ecodata-2bee6",
+  storageBucket: "ecodata-2bee6.firebasestorage.app",
+  messagingSenderId: "544837123249",
+  appId: "1:544837123249:web:6c362350a00c6dab10b690"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+onAuthStateChanged(auth, async (user) => {
+  const usernameDisplay = document.getElementById("usernameDisplay");
+
+  try {
+    const userRef = doc(db, "users", user.uid);
+    const userSnap = await getDoc(userRef);
+
+    if (!userSnap.exists()) return;
+
+    const userData = userSnap.data();
+
+    // 🔥 Redirect immediately if agent
+    if (userData.isAgent === true) {
+      window.location.href = "agentPage.html";
+      return; // stop further execution
+    }
+
+    const greeting = updateClock();
+    // Display username if element exists
+    if (usernameDisplay) {
+      const name = userData.username || "Dear";
+      const suffix = userData.isAgent ? "Agent" : "";
+      usernameDisplay.textContent = `${greeting}, ${name}${suffix}!`;
+    }
+
+  } catch (err) {
+    console.error("Error fetching user data:", err);
+  }
+});
+
+
+const logoutBtn = document.getElementById("logOutBtn");
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", async () => {
+
+    try {
+      await signOut(auth);
+      showSnackBar("Logged out successfully!");
+      hideSignupModal();
+      //window.location.href = "login.html"; // change if needed
+    } catch (error) {
+      console.error("Logout error:", error);
+      showSnackBar("Error logging out.");
+    }
+  });
+
+}
+
+
+// SIGN OR LOGIN POP UP
+
+onAuthStateChanged(auth, (user)=>{
+
+  const seen = localStorage.removeItem("signupPromptSeen");
+
+  if(!user && !seen){
+    setTimeout(()=>{
+      showSignupModal();
+    },2000);
+  }
+
+});
+
+
+  const signupModal = document.getElementById("signupModal");
+const closeSignup = document.getElementById("closeSignup");
+
+function showSignupModal(){
+  signupModal.classList.add("active");
+}
+
+function hideSignupModal(){
+  signupModal.classList.remove("active");
+}
+
+closeSignup.addEventListener("click", ()=>{
+  hideSignupModal();
+  localStorage.setItem("signupPromptSeen","yes");
+});
+
+
+document.getElementById("createAccountBtn").onclick = ()=>{
+  window.location.href = "./signUp.html";
+};
+
+document.getElementById("loginBtn").onclick = ()=>{
+  window.location.href = "./login.html";
+};
+
+// FORCE TO LOGIN END
+
+
+
+  
+  // === REAL TIME CLOCK ===
+function updateClock() {
+  const clock = document.getElementById("clock");
+  const now = new Date();
+
+  const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const dayName = days[now.getDay()];
+
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  // Greeting logic
+  let greeting = "";
+  if (hours < 12) greeting = "Good Morning";
+  else if (hours < 18) greeting = "Good Afternoon";
+  else greeting = "Good Evening";
+
+  const ampm = hours >= 12 ? "PM" : "AM";
+
+  hours = hours % 12 || 12;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  clock.innerHTML = `${dayName} ${hours}:${minutes}:${seconds} ${ampm}`;
+
+  return greeting; // 🔥 important
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+
+
+
+
+
+
+
+// SNACKBAR SECTION //
+// ===== SNACKBAR FUNCTION ===== //
+let snackbarTimeout = null;
+
+function showSnackBar(message, type = "info", duration = 4000) {
+  let snackbar = document.querySelector(".snackbar");
+
+  // Create snackbar if it doesn't exist
+  if (!snackbar) {
+    snackbar = document.createElement("div");
+    snackbar.className = "snackbar";
+
+    snackbar.innerHTML = `
+      <span class="snackbar-text"></span>
+      <div class="snackbar-progress"></div>
+    `;
+
+    document.body.appendChild(snackbar);
+  }
+
+  // Update text
+  snackbar.querySelector(".snackbar-text").textContent = message;
+
+  // Color by type
+  if (type === "success") snackbar.style.background = "rgba(7, 29, 26, 0.95)";
+  else if (type === "error") snackbar.style.background = "#dc3545";
+  else if (type === "warning") snackbar.style.background = "#ffc107";
+  else snackbar.style.background = "rgba(7, 29, 26, 0.95)";
+
+  // Reset progress animation
+  const progress = snackbar.querySelector(".snackbar-progress");
+  progress.style.animation = "none";
+  void progress.offsetWidth;
+  progress.style.animation = `snackbar-progress ${duration}ms linear forwards`;
+
+  snackbar.classList.add("show");
+
+  // Clear previous timeout
+  if (snackbarTimeout) clearTimeout(snackbarTimeout);
+
+  snackbarTimeout = setTimeout(() => {
+    snackbar.classList.remove("show");
+  }, duration);
+}
+// snackbar ends
+
+</script>
+
+
+
+
+
+
+
+
+<!---MODE BTNS-->
+<script>
+  // add click event to gridBtn
+ const modeButtons = document.querySelectorAll(".mode-Btn");
+
+ modeButtons.forEach(btn => {
+  btn.addEventListener("click", () =>{
+    modeButtons.forEach(b => 
+    b.classList.remove("active"));
+    btn.classList.add("active"); 
+   })
+ })
+</script>
+
+
+<!----SCROLL-->
+<script>
+  const scrollWrapper = 
+  document.querySelector(".google-thumbnails-wrapper");
+  const thumbnails = 
+  document.getElementById("thumbnailScroll");
+
+  // Duplicate all items for seamless scroll
+  thumbnails.innerHTML += thumbnails.innerHTML;
+
+  let scrollAmount = 0;
+  const speed = .5; // pixel per frame
+
+  function animateScroll() {
+    scrollAmount += speed;
+
+    // when  scrolled half of the content. reset to start
+    if( scrollAmount >= thumbnails.scrollWidth / 2) {
+      scrollAmount = 0;
+    }
+
+    thumbnails.style.transform = `translateX(-${scrollAmount}px)`;
+    requestAnimationFrame(animateScroll);
+  }
+
+  // start animation
+  animateScroll();
+
+</script>
+
+<!---NOTIFICATION----->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+const notificationIcon = document.querySelectorAll(".notifity");
+const notifyCount = document.getElementById("notifyCount");
+const NOTIFY_KEY = "notifications_read";
+
+// on page load
+if (localStorage.getItem(NOTIFY_KEY) === "true") {
+  notifyCount.style.display = "none"
+}
+
+// click to mark as read 
+notifyCount.addEventListener("click", () => {
+  notifyCount.style.display = "none";
+  localStorage.setItem(NOTIFY_KEY, "true");
+});
+  });
+</script>
+
+
+
+
+<!---MENU-CARD-JS-->
+<script>
+document.addEventListener("DOMContentLoaded", ()=> {
+ const cardToggler = document.getElementById("cardToggler");
+ const secondToggler = document.getElementById("menuDarkMode");
+const cardCloser = document.getElementById("closeCard");
+
+  // toggle menucard
+  cardToggler.addEventListener("click", function(e) {
+    e.stopPropagation();
+    if(cardCloser.classList.contains("active")){
+      cardCloser.classList.remove("active");
+    } else{
+      cardCloser.classList.add("active");
+    }
+  });
+
+  // secondToggler
+  secondToggler.addEventListener("click", function(e) {
+    e.stopPropagation();
+
+    if(secondToggler) {
+      cardCloser.classList.add("active");
+    } else {
+      cardCloser.classList.remove("active");
+    }
+  })
+
+  // when ever clicked outside?
+  window.addEventListener("click", function(e) {
+    if(!cardCloser.contains(e.target) && !cardToggler.contains(e.target)) {
+      cardCloser.classList.remove("active");
+    }
+  })
+})
+
+ 
+
+
+</script>
+
+
+<!-----DARK-MODE JS-->
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const savedTheme = localStorage.getItem("theme");
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      document.body.classList.add("dark-mode");
+      toggle.checked = true;
+    } else {
+      document.body.classList.remove("dark-mode");
+      toggle.checked = false;
+    }
+  }
+
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(systemPrefersDark ? "dark" : "light");
+  }
+
+  toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+      localStorage.setItem("theme", "dark");
+      applyTheme("dark");
+    } else {
+      localStorage.setItem("theme", "light");
+      applyTheme("light");
+    }
+  });
+
+  // Auto-change if system theme changes and user has no preference
+  window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+    if (!localStorage.getItem("theme")) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

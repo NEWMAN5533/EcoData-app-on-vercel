@@ -1,0 +1,3729 @@
+:root {
+  --bg-cl: #FFF;
+  --primary-cl: #fff;
+  --secondary-cl: rgb(50, 50, 190);
+  --dark-cl: #0a0a0a;
+  --ascent-cl: rgb(158, 97, 209);
+  --background-cl: #e6e8ce;
+  --card-full-bg-cl: rgb(255, 217, 0);
+  --card-full-tele-bg-cl: rgb(221, 19, 19);
+  --card-full-airtel-bg-cl:  rgb(6, 6, 231);
+  --border-cl-2: rgba(66, 66, 26, 0.226);
+  --mtn-btn: rgb(193, 196, 19);
+  --telecel-btn: rgb(180, 57, 19);
+  --airteltigo-btn: rgb(28, 46, 119);
+
+  --hero-bg-cl:  linear-gradient(135deg, #00c853, #00796b);
+}
+
+/******
+MAIN SECTION STYLE
+*******/
+.card-container{
+  width: 100%;
+  max-width: 370px;
+  padding: .3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+  justify-self: center;
+  position: relative;
+  margin-top: 3rem;
+}
+
+
+
+
+.card-container .hero {
+  background: linear-gradient(135deg, #00796b, #03be51);
+  color: white;
+  text-align: center;
+  padding: 1rem .1rem;
+  width: 100%;
+  max-width: 370px;
+  height: 16rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+  border-radius: 4px;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgb(0,0,0,0.2);
+  justify-self: center;
+}
+
+.card-container .hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 90%;
+  gap: 1rem;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card-container .hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.1rem;
+}
+
+.card-container .hero-title img{
+  width: 2.1rem;
+  height: 2.1rem;
+  animation: waveAt 2s infinite;
+}
+
+@keyframes waveAt {
+  from {
+    transform: rotate(0deg);
+  }
+  to 
+  {
+    transform: rotate(20deg);
+  }
+} 
+  
+
+.card-container .hero-cta{
+  width: 100%;
+  padding: .2rem;
+  max-width: 94%;
+  margin-top: .3rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.card-container .hero-cta h1{
+  margin: 0;
+  font-size: 1.3rem;
+  color: rgb(253, 208, 6);
+  font-weight: 600;
+}
+
+
+.card-container .hero-cta p{
+  font-size: .9rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+
+/****
+BUNDLE INFO SECTION
+****/
+.bundle-info{
+  width: 100%;
+  max-width: 370px;
+  display: flex;
+  border: 1px solid rgb(218, 211, 211);
+  position: relative;
+  gap: 1rem;
+  justify-content: space-between;
+  background: var(--background-cl);
+  border-radius: .8rem;
+  border: 1px solid rgb(214, 211, 211);
+}
+
+.info-title h2{
+  color: rgb(97, 97, 112);
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.info-title p{
+  color: rgb(104, 104, 112);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ .bundle-info .network-buttons {
+  display: flex;
+  width: 100%;
+  max-width: 97%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  text-align: center;
+  margin: 0;
+
+}
+
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+/****
+js card style
+****/
+#bundle-details{
+  width: 100%;
+  height: max-content;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .4rem;
+  text-align: center;
+  justify-self: center;
+  position: relative;
+}
+
+.bundle-details p{
+  color: rgb(8, 156, 149);
+  font-weight: 500;
+  font-size: .8rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.htu{
+  color: rgb(216, 213, 14);
+}
+
+.hvu{
+  color: rgb(216, 71, 14);
+}
+
+.hto{
+  color: rgb(11, 151, 161);
+}
+
+.uli{
+  
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  color: rgb(81, 81, 88);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: .3rem;
+  margin: 0;
+  font-size: .8rem;
+  justify-items: center;
+  border: 1px solid rgb(238, 234, 234);
+  justify-content: center;
+  justify-self: center;
+  position: relative;
+  border-radius: .3rem;
+}
+
+.uli strong{
+  color: rgb(7, 134, 85);
+  font-size: .8rem;
+}
+
+.uli b{
+  color: rgb(15, 114, 98);
+  font-size: .8rem;
+}
+
+.uli  p{
+  font-size: .7rem;;
+}
+
+.uli ul  p{
+  font-size: .8rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.uli ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-right: 2rem;
+  text-align: center;
+}
+
+.uli ul li{
+  list-style: none;
+  gap: .4rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+
+.workflow {
+  border: 1px solid rgb(234, 234, 235);
+  border-radius: .4rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 370px;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.workflow h2{
+  color: rgb(100, 100, 107);
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+.workflow .steps {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+.workflow .step {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 1rem;;
+  gap: .5rem;;
+  max-width: 99%;
+  height: 16rem;
+  background: rgb(235, 230, 230);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+
+}
+
+.workflow .three p{
+  padding-top: -1rem;
+}
+
+.workflow .three{
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;;
+  height: 19rem;
+}
+
+.workflow .step p{
+  font-size: .8rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  color: rgb(136, 132, 132);
+}
+
+.workflow .step span{
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(10, 116, 236);;
+}
+
+.workflow .step h3{
+  color: rgb(81, 81, 88);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.workflow .step
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 480px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+
+
+
+
+
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+.faq h2{
+  font-size: 1.1rem;
+  white-space: nowrap;
+  color: rgb(24, 23, 23);
+}
+
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(9, 150, 114));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: rgb(102, 99, 99);
+  font-size: 1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+ 
+}
+
+
+
+
+/****
+MENU-CARD SECTION
+****/
+.menu-card-container {
+  width: 100%;
+  max-width: 13rem;
+  height: 19rem;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  right: -500px;
+  top: 4rem;
+  border: 0.1px solid var(--bg-cl);
+  background: rgb(26, 24, 24);
+  box-shadow: 0 4px 8px rgba(58, 57, 57, 0.4);
+  border-radius: .2rem;
+  transition: .5s ease-in-out;
+}
+.close-card{
+  display: flex;
+  width: 100%;
+  height: max-content;
+  padding: .2rem;
+  align-items: end;
+  justify-content: end;
+}
+
+
+.menu-card{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.4rem;
+  width: 90%;
+  height: 18rem;
+  margin: 0 .4rem;
+  border: 0.2px solid pink;
+  padding: .4rem 0;
+  background: rgb(255, 255, 255);
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/***
+CARD TOP
+***/
+.shortcut-sidebar-nav {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  top: .1rem;
+  text-align: center;
+  margin: .4rem 0;
+  justify-content: center;
+  text-align: center;
+  align-items: flex-start;
+  position: relative;
+  background-color: transparent;
+}
+
+.sidebar-nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  text-decoration: none;
+  padding: .1rem .1rem;
+  transition: .2s ease;
+}
+
+.sidebar-nav img{
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: rgb(233, 227, 233);
+  padding: .14rem;
+  border-radius: .4rem;
+}
+
+.sidebar-nav a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  gap: .5rem;
+  color: rgb(165, 159, 159);
+}
+
+.shortcut-links{
+  display: flex;
+  width: 100%;
+  background: transparent;
+  height: max-content;
+  padding: .1rem;;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: .5rem;
+}
+
+
+
+.link{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 2.8rem;;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: .5rem;
+  color: black;
+  margin: 0 .4rem;
+  transition: .1s ease-in-out;
+}
+
+.link:hover{
+  background: rgb(82, 79, 79);
+  color: rgb(247, 246, 246);
+  height: 3rem;
+  width: 100%;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+}
+
+
+.link a{
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  color: rgb(32, 29, 29);
+  font-size: 1.1rem;
+}
+
+.link a:hover{
+  color: var(--bg-cl);
+}
+
+.link img{
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-right: .4rem;
+  background: var(--background-cl);
+  padding: .2rem;
+  border-radius: 5px;
+
+}
+
+.sidebar-nav:hover{
+  background: rgb(192, 185, 185);
+  color: white;
+  width: 100%;
+  padding: .1rem;
+}
+
+
+/***
+CARD BOTTOM
+****/
+.logout-btn{
+  display: flex;
+  border: 0.2px solid green;
+  width: 10rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: green;
+  color: var(--bg-cl);
+  height: 2rem;
+  font-size: 1rem;
+  position: relative;
+  display: flex;
+  box-shadow: 0 2px 6px rgba(61, 37, 32, 0.479);
+  transition: 1s ease;
+  cursor: pointer;
+  margin: .5rem 1rem;
+}
+
+.logout-btn:hover{
+  background: rgb(52, 80, 11);
+  box-shadow: 0 2px 6px rgba(71, 46, 42, 0.479);
+}
+
+
+
+
+
+
+
+
+
+
+
+/***--THE 16 @MEDIA QUERIES.
+
+/* 1. Extra small devices (phones, portrait) */
+@media (max-width: 320px) {
+  
+
+.hero {
+  background: linear-gradient(135deg, #00796b, #03be51);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 310px;
+  display: flex;
+  justify-self: center;
+  margin: 4.8rem 0;
+  align-items: center;
+  border-radius: 1rem;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgb(165, 156, 156);
+  justify-content: center;
+  justify-self: center;
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 480px;
+    margin: auto;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    max-width: 270px;
+    justify-content: center;
+    gap: .4rem;
+    margin: 1.5rem 0;
+  }
+  .network-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    width: 5rem;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+}
+.step {
+  max-width: 200px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 32px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom:20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+ 
+}
+
+ }
+
+/* 2. Small phones */
+@media (max-width: 360px) { }
+
+/* 3. Larger small phones */
+@media (max-width: 375px) { }
+
+/* 4. Standard mobile (e.g. iPhone X/12/13) */
+@media (max-width: 414px) {
+  .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 480px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+}
+.step {
+  max-width: 200px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 480px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+ 
+}
+ }
+
+/* 5. Large phones / tablets */
+@media (min-width: 480px) {  
+  .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 480px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+}
+.step {
+  max-width: 200px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 480px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+}
+
+/* 6. Small tablets */
+@media (min-width: 600px) {
+ .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 570px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: grid;
+  width: 100%;
+  max-width: 590px;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+}
+.step {
+  max-width: 250px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 600px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+ }
+
+/* 7. Mid-size tablets */
+@media (min-width: 640px) {
+  .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 620px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: grid;
+  width: 100%;
+  max-width: 590px;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+}
+.step {
+  max-width: 250px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 640px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+ }
+
+/* 8. Tablets portrait */
+@media (min-width: 768px) {
+  .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: grid;
+  width: 100%;
+  max-width: 590px;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+}
+.step {
+  max-width: 400px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 768px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+ }
+
+/* 9. Tablets landscape / small laptops */
+@media (min-width: 800px) {
+   .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: grid;
+  width: 100%;
+  max-width: 590px;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+}
+.step {
+  max-width: 400px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 800px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+ }
+
+/* 10. Large tablets */
+@media (min-width: 900px) {
+    .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: grid;
+  width: 100%;
+  max-width: 890px;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+}
+.step {
+  max-width: 500px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 900px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+ }
+
+/* 11. Small laptops */
+@media (min-width: 1024px) {
+    .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 1010px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+  
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: flex;
+
+  width: 100%;
+  max-width: 890px;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+
+}
+.step {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 1016px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+ }
+
+/* 12. Medium laptops / desktops */
+@media (min-width: 1200px) {
+   .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 1190px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+  
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: flex;
+
+  width: 100%;
+  max-width: 890px;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+
+}
+.step {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 1200px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+ }
+
+/* 13. Large desktops */
+@media (min-width: 1280px) {
+    .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 1250px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+  
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: flex;
+
+  width: 100%;
+  max-width: 890px;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+
+}
+.step {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 1280px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+ }
+
+/* 14. XL desktops */
+@media (min-width: 1366px) { 
+  .hero {
+  padding: 1.4rem 1rem;
+  width: 100%;
+  max-width: 1250px;
+  height: max-content;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+  
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: flex;
+
+  width: 100%;
+  max-width: 890px;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+
+}
+.step {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 1366px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+}
+
+/* 15. Very large screens */
+@media (min-width: 1440px) {
+    .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 1350px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+  
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: flex;
+
+  width: 100%;
+  max-width: 890px;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+
+}
+.step {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+max-width: 1440px;
+align-items: center;
+justify-content: center;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+ }
+
+/* 16. Extra-wide monitors */
+@media (min-width:1920px){
+   .hero {
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 1810px;
+  display: flex;
+  justify-self: center;
+  margin-top: 4.7rem;
+  
+ 
+}
+
+.hero-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+  padding: .3rem;
+  background: var(--hero-bg-cl);
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title h1{
+  color: var(--bg-cl);
+  opacity: .8;
+  font-size: 1.7rem;
+}
+
+.hero p{
+  font-size: 1.2rem;
+}
+
+
+
+.bundle-info {
+    text-align: center;
+    padding: 2rem;
+    max-width: 580px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .network-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem 0;
+    height: 2.9rem;
+  }
+  .network-btn {
+    padding: 0.8rem ;
+    border: none;
+    width: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .network-btn:hover {
+    background-color: #004aad;
+  }
+  .bundle-details {
+    background: #814343;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.bundle-details p{
+  font-size: 1.1rem;
+}
+
+/***
+BUTTONS STYLES
+***/
+.mtn-btn{
+  background: linear-gradient(135deg, rgb(243, 243, 34), rgb(102, 102, 57));
+}
+
+.mtn-btn:hover{
+  background: rgb(212, 212, 35);
+}
+
+.telecel-btn{
+  background: linear-gradient(135deg, rgb(138, 65, 66), rgb(243,5,5));
+}
+.telecel-btn:hover{
+  background: rgb(223, 14, 14);
+}
+.airtel-btn{
+ background: linear-gradient(135deg, rgb(7,7,230), rgb(29, 29, 77));
+}
+
+.airtel-btn:hover{
+  background: rgb(7, 7, 230);
+}
+
+
+
+
+
+
+
+
+
+
+.networks {
+  text-align: center;
+  margin: 2rem 0;
+}
+.network-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.network-btn.active {
+  background: #00c853;
+  color: white;
+}
+
+
+.workflow {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.steps {
+  display: flex;
+
+  width: 100%;
+  max-width: 890px;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+
+}
+.step {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  background: rgb(252, 250, 250);
+  padding: 1rem;
+  border: 0.1px solid white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.step p{
+  font-size: 1rem;
+}
+.faq {
+padding: 2rem;
+ width: 100%;
+ max-width: 1920px;
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+ background: linear-gradient(135deg, rgb(212, 203, 203), rgb(15, 41, 15));
+ justify-self: center;
+
+}
+.faq details {
+  margin-bottom: 20px;
+  height: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+
+.faq summary{
+  background: linear-gradient(135deg, rgb(219, 207, 207), rgb(12, 112, 12));
+  display: flex;
+  height: 2.7rem;
+  justify-content: start;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 1rem;
+}
+
+.faq p{
+  background-color: white;
+  font-size: 1.1rem;
+  padding: .3rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-end-end-radius: 1rem;
+  border-start-start-radius: 1rem;
+  box-shadow: 0 0 8px rgb(100, 104, 95);
+  }
+}

@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <meta name="google-site-verification" content="uPuuYtdufpe-I9fBtT046jnMoZO7yvAEzEyCemHr1S0" />
+
+  <meta name="title" content="EcoData">
+  <meta name="description" content="Ecodata lets you buy affordable data bundles for MTN, Telecel & AirtelTigo with Fast delivery, Secure Payment, and the best discount in Ghana. Shop affordable data packages for browsing, streaming, and more on Ecodata">
+  <title>Become an Agent</title>
+
+
+  <!---shortcut-icon-->
+  <link rel="shortcut icon" href=".\css/icons/icon-shortcut.png" type="image/png">
+
+  <!---ICO-->
+  <link rel="shortcut icon" href=".\css/icons/favicon-ico.png" type="image/png">
+
+<!---FULL-OPEN-GRAPH-->
+<meta property="og:title" content="Buy Cheap Data Bundles in Ghana on Ecodata Website">
+<meta property="og:description" content="Affordable MTN, Telecel & AirtelTigo data bundles. Reliable, Fastest-delivery, and secure paystack payment.">
+<meta property="og:url" content="https://ecodata-app.onrender.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EcoData">
+
+
+<!----GOOGLE-SITE-SEARCH-ENDS-->
+  <!---css-link-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleGlobal.css">
+  
+  <style>
+   .loader-card img{
+    width: 2.5rem;
+    height: 1.9rem;
+    margin-bottom: -.9rem;
+  }
+
+  .loader-card p{
+    font-weight: 600;
+    color: rgb(224, 226, 226);
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+/***
+LOADING SPINNER
+****/
+.paystack-loader{
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  z-index: 999999;
+  align-items: center;
+}
+
+#paystackLoader{
+  backdrop-filter: blur(1px);
+  background:  rgb(39, 37, 37);
+  z-index: 999999;
+  overflow: hidden;
+}
+
+.paystack-loader.hidden{
+  display: none;
+}
+
+.loader-card {
+  background: rgb(39, 37, 37);
+  padding: 20px 40px;
+  border-radius: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: .9rem;
+  animation: scaleIn .25s ease;
+  z-index: 999999999999;
+}
+
+.spinner{
+    width: 29px;
+    height: 29px;
+    border: 3.5px solid rgb(147, 149, 150);
+    border-top: 3.5px solid transparent;
+    border-radius: 50%;
+    animation: spin .9s linear infinite;
+    display: flex;
+}
+
+
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/***
+LOADING SPINNER
+****/
+
+</style>
+
+  <style>
+  .dark-mode .register-bnefits{
+    background: var(--welcome-card-bg);
+    border: 1px solid var(--thin-border-5);
+    margin-top: 2rem;
+  }
+
+  .dark-mode .register-bnefits small{
+    color: rgb(161, 159, 159);
+  }
+
+  .dark-mode .register-bnefits h2{
+    color: white;
+    opacity: .8;
+  }
+
+  .dark-mode .price-title h2{
+    color: white;
+    opacity: .8;
+  }
+
+
+    .register-bnefits .priceSub{
+    color: rgb(29, 136, 113);
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  .dark-mode .register-bnefits .priceSub{
+    color: white;
+    font-weight: 00;
+    opacity: .9;
+    font-size: 1.3rem;
+    margin: .3rem;
+    padding: 1rem 0;
+    padding-bottom: 1rem;;
+  }
+
+  .register-bnefits .priceSub {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  position: relative;
+  justify-items: center;
+  text-align: center;
+  }
+
+  .dark-mode .register-bnefits .priceSub img{
+    border-radius: 50%;
+  }
+
+/***
+AGENT CODE ENDS
+****/
+
+:root {
+  --bg-cl: #FFF;
+  --primary-cl: #fff;
+  --secondary-cl: rgb(50, 50, 190);
+  --dark-cl: #0a0a0a;
+  --ascent-cl: rgb(158, 97, 209);
+  --background-cl: #e6e8ce;
+  --card-full-bg-cl: rgb(255, 217, 0);
+  --card-full-tele-bg-cl: rgb(221, 19, 19);
+  --card-full-airtel-bg-cl:  rgb(6, 6, 231);
+  --border-cl-2: rgba(66, 66, 26, 0.226);
+  --mtn-btn: rgb(193, 196, 19);
+  --telecel-btn: rgb(180, 57, 19);
+  --airteltigo-btn: rgb(28, 46, 119);
+
+
+  /***
+  NEW ROOT
+  ***/
+  --btn-bg-cl: rgb(250, 126, 9);
+  --user-panel-bg: rgba(42, 42, 194, 0.938);
+  --clock-bg-cl: rgb(2, 61, 52);
+
+  /***
+  DARK MODE COLORS
+  ***/
+  --darkMode-bg-cl: rgb(10, 10, 10);
+  --darkMode-bg-cl-2: rgb(10, 1, 22);
+  --welcome-card-bg: rgba(3, 3, 3, 0.918);
+  --welcome-card-bg-1: rgb(2, 2, 39);
+  --welcome-card-bg-2: rgb(24, 5, 5);
+  --thin-border: rgb(35, 48, 49);
+  --text-cl: rgb(145, 168, 164);
+  --text-cl-2: rgb(210, 216, 216);
+  --text-cl-3: rgb(139, 141, 141);
+
+  /**
+  BORDER SOLID COLORS
+  **/
+  --thin-border-1:  #1b8a747e;
+  --thin-border-2:  #830616;
+  --thin-border-3:  #b97207;
+  --thin-border-4:  #036aa7;
+  --thin-border-5:  #bba907;
+  --thin-border-6:   rgb(17, 2, 31);
+  --thin-border-7:  rgb(1, 11, 39);
+
+  /***
+  CARD BG
+  ***/
+  --card-mtn-bg:  #faba5ad0;
+  --card-tel-bg:  #fa537dd0;
+  --card-tigo-bg:  #6cbff7cb;
+}
+
+
+
+
+
+
+
+
+    .card-container{
+      margin-top: .1rem;
+    }
+
+    .trusted-by{
+        background: linear-gradient(134deg, rgb(9, 148, 148),rgb(3, 73, 73));
+  text-align: center;
+    }
+
+    .trusted-logos P{
+      color: white;
+      font-size: 1rem;
+    }
+
+
+
+    .benefit-notes{
+      width: 100%;
+      height: max-content;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      border-bottom: 9px solid rgb(3, 73, 73);
+      max-width: 370px;
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+
+    .register-bnefits{
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 340px;
+      padding: 1rem;
+      justify-content: center;
+      height: 15rem;
+      border: 1px solid rgb(228, 225, 225);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .register-bnefits h2{
+      font-size: 1.2rem;
+      color: rgb(5, 49, 47);
+    }
+
+    .agent-benefits {
+  padding: 60px 20px;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.dark-mode .agent-benefits{
+  background: var(--welcome-card-bg)
+}
+
+.agent-benefits h2 {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #159b9b;
+}
+
+.dark-mode .agent-benefits h2{
+  color: var(--card-tigo-bg);
+}
+
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: #ffffff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.dark-mode .benefit-card{
+  background: var(--darkMode-bg-cl);
+  border: 1px solid var(--thin-border-1);
+}
+
+.benefit-card h3 {
+ display: flex;
+ align-items: center;
+ text-align: center;
+ justify-content: center;
+}
+
+.dark-mode .benefit-card h3{
+  color: var(--thin-border-4)
+}
+
+.benefit-card h3 img{
+  margin-right: .5rem;
+  border: 1px solid rgb(245, 243, 243);
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: .1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.dark-mode .benefit-card h3 img{
+  border: none;
+  border-radius: 0 ;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #15355a;
+}
+
+.benefit-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.dark-mode .benefit-card p{
+  color: #b4b4b4;
+}
+
+
+  .register-bnefits{
+    margin-bottom: 6rem;
+  }
+
+  .register-bnefits small{
+    text-decoration: line-through;
+    font-size: 1.1rem;
+    color: rgb(128, 118, 118);
+  }
+
+
+
+/****
+AGENT PRICE
+****/
+.agent-price{
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.dark-mode .agent-price {
+  background: var(--welcome-card-bg);
+  border: 1px solid var(--thin-border-1)
+}
+
+.price-list{
+  padding: .2rem;
+  border-radius: .8rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .include
+{
+  background: var(--card-tigo-bg);
+  border: none;
+}
+
+
+.dark-mode .exclude
+{
+  background: var(--card-mtn-bg);
+  border: none;
+}
+
+    
+ .regis{
+  width: 100%;
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(238, 243, 242);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: .3rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background: linear-gradient(134deg, rgb(9, 148, 148),rgb(3, 73, 73));
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.underdev{
+  width: 100%;
+  max-width: 360px;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .4rem;
+  flex-direction: column;
+  line-height: 1.1;
+  overflow: none;
+  background: rgb(145, 144, 144);
+  color: white;
+  margin-top: 1rem;
+  border-radius: .8rem;
+  border-left: 6px solid rgb(110, 110, 116);
+  border-right: 6px solid rgb(110, 110, 116);
+}
+
+.underdev h2{
+  margin: 0;
+  line-height: .7;
+  
+}
+
+.underdev p{
+  margin: 0;
+  line-height: .5;
+  margin-bottom: 1.4rem;
+  font-size: .9rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+
+  .loader-card img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-bottom: -.9rem;
+  }
+
+  .loader-card p{
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+
+  </style>
+
+        <!----USERS ANIMATION---->
+<style>
+      #usedBy{
+       animation: spark 6s linear infinite;
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       display: flex;
+       line-height: 1;
+       font-size: .68rem;
+       border-radius: 6px;
+      }
+
+      @keyframes spark {
+        0% {
+          background: linear-gradient(135deg, rgb(87, 150, 150),rgb(96, 155, 155));
+          color: rgb(245, 244, 244);
+        }
+        25% {
+          background: linear-gradient(135deg, rgb(36, 126, 126),rgb(96, 155, 155));
+          color: rgb(238, 241, 240);
+        }
+        75% {
+          background: linear-gradient(135deg, rgb(35, 126, 126),rgb(96, 155, 155));
+          color: rgb(4, 179, 135);
+        }
+        100% {
+          background: linear-gradient(135deg, rgb(58, 112, 112),rgb(67, 170, 170));
+          color: rgb(248, 248, 248);
+        }
+      }
+</style>
+
+
+<!---BOTTOM-NAV-STYLE-->
+  <style>
+
+    :root{
+  --darkMode-bg-cl: rgb(10, 10, 10);
+  --darkMode-bg-cl-2: rgb(10, 1, 22);
+  --welcome-card-bg: rgba(3, 3, 3, 0.918);
+  --welcome-card-bg-1: rgb(2, 2, 39);
+    }
+    .bottom-navbar{
+      width: 100%;
+      max-width: 900px;
+      height: 4.3rem;
+      position: fixed;
+      justify-self: center;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      gap: .3rem;
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:.1rem .1rem;
+      background: white;
+      overflow-x: hidden;
+      border-top: 1px solid rgb(240, 238, 238);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .dark-mode .bottom-navbar{
+      background: var(--darkMode-bg-cl);
+      border-top: 1px solid rgb(36, 34, 34);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+
+
+    .bottom-navbar .btom-navIcon{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 25%;
+      gap: .3rem;
+      height: 99%;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  outline: none;
+  -ms-user-select: none;;
+  user-select: none;
+    }
+
+    .btom-navIcon .activeImg{
+      padding: .19rem 1.16rem;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      border-radius: .9rem;
+      -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  outline: none;
+  -ms-user-select: none;;
+  user-select: none;
+    }
+
+      .activeImg.activeMin{
+    padding: .19rem .3rem;
+    background: rgb(227, 230, 228);
+    }
+    .dark-mode .activeImg.activeMin{
+      background: rgba(36, 58, 44, 0.493);
+    }
+
+
+
+    .activeImg img{
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+
+  .activeImg .pin{
+    width: 2rem;
+    height: 1.8rem;
+    margin-bottom: -.3rem;
+  }
+
+
+
+    .btom-navIcon .bottomIcon-textNav{
+      font-size: .76rem;
+      font-weight: 700;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb(105, 105, 107);
+    }
+
+    .dark-mode .btom-navIcon .bottomIcon-textNav{
+      color: rgb(252, 250, 250);
+      opacity: .7;
+    }
+
+  .gridCard-wrapper{
+    margin-bottom: 3rem;
+  }
+  </style>
+
+   <!---ECOSHOP-FIXED-=BUTTON-->
+    <style>
+
+      .ecodataShopBtn{
+        width: 100%;
+        height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background: transparent;
+        bottom: 4rem;
+        z-index: 99999999;;
+      }
+      .shop-fixedBtn{
+        width: 3.2rem;
+        height: 3.2rem;
+        position: fixed;
+        padding: .4rem;
+        bottom: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+        background: rgb(245, 223, 200);
+        border-radius: 50%;
+        z-index: 99999999999999;
+        cursor: pointer;
+        border: 1px solid  white;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+
+      .shop-fixedBtn img{
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+
+
+    </style>
+
+</head>
+<body>
+
+
+
+<nav class="navbar">
+<div class="nav-left">
+<a href="index.html">
+  <img class="log" src="./css/icons/icon-shortcut.png" alt="image" loading="lazy">
+</a>
+</div>
+<div class="nav-right" >
+
+  <a href="notification.html">
+     <div class="notis">
+    <img class="notifity" src="./css/icons/notify (1).png" alt="" loading="lazy" style="display: none;">
+    <span id="notifyCount">2</span>
+  <img class="notifity" hidden
+   src="./css/icons/notify (3).png" alt="" loading="lazy">
+  </div>
+  </a>
+ 
+ 
+ <!---DARK MODE-->
+<label class="theme-switch">
+  <input type="checkbox" id="themeToggle">
+  <span class="slider">
+    <span class="icon sun"><img src="./css/icons/sun2 (1).png" alt="images" loading="lazy"></span>
+    <span class="icon moon"><img src="./css/icons/moon2.png" alt="images" loading="lazy"></span>
+  </span>
+</label>
+
+<img id="cardToggler" src="./css/icons/menu-icon.png" alt="image" class="menu-icon" loading="lazy" style="background: none ;">
+
+<img id="menuDarkMode" class="menu-icon" src="./css/icons/menu-white.png" alt="image" style="background: none;">
+</div>
+</nav>
+<!---MAIN-REGISTER PAGE----->
+
+<section class="card-container">
+<div class="welcome-card">
+  <div class="welcome-top">
+    <div class="welcome-top-leftside">
+      <p id="usernameDisplay"></p>
+    </div>
+    <div class="welcome-top-right">
+      <input type="text" placeholder=" EcoData  ">
+    </div>
+  </div>
+  <div class="welcome-bottom">
+    <div class="close-time">
+    <span><small class="dotter"></small> Active 24/7</span></div>
+    <div id="clock"></div>
+  </div>
+</div>
+
+
+   <section class="trusted-by">
+  <div class="trusted-container">
+    <div class="wrapper-notice">
+      <div id="usedBy" class="left-tu">
+        1.01k+ Users
+      </div>
+      <span class="trusted-badge"> Verified Platform</span>
+    </div>
+
+   
+   
+
+    <p class="trusted-text">
+      Used daily across Ghana <img src="./css/icons/flag3.jpg" alt="flag" loading="lazy"> 
+    </p>
+
+    <div class="trusted-logos">
+      <p>REGISTER AND EnJOY AMAzING DIScOUNT </p>
+    </div>
+  </div>
+  <div class="baw-right">
+   <img src="./css/images/baw.png" alt="" loading="lazy">
+  </div>
+
+</section>
+
+  <div class="underdev" style="display: none;">
+    <h3> under development</h3>
+    <p>Stay tuned!</p>
+  </div>
+
+
+
+<section class="benefit-notes">
+
+
+  <section class="agent-benefits">
+  <h2>Why Register as an Agent?</h2>
+
+  <div class="benefits-container">
+
+    <div class="benefit-card">
+      <h3><img src="./css/icons/totalspent.png" alt=""> Discounted Prices</h3>
+      <p>
+        Get exclusive reduced prices on all eligible offers. 
+        Pay less than regular users and increase your savings or profit margin.
+      </p>
+    </div>
+
+    <div class="benefit-card">
+      <h3><img src="./css/icons/totalorder.png" alt=""> Personal Use Advantage</h3>
+      <p>
+        Enjoy lower costs for your own data and services. 
+        Perfect for heavy users who want consistent affordable pricing.
+      </p>
+    </div>
+
+    <div class="benefit-card">
+      <h3><img src="./css/icons/totalData.png" alt=""> Resell & Earn</h3>
+      <p>
+        Buy at discounted agent rates and resell at market prices. 
+        Keep the difference as your profit.
+      </p>
+    </div>
+
+    <div class="benefit-card">
+      <h3><img src="./css/icons/secure-payment.png" alt=""> Secure Agent Access</h3>
+      <p>
+        Your agent status is securely verified and linked to your account, 
+        giving you protected access to exclusive pricing.
+      </p>
+    </div>
+
+  </div>
+</section>
+</section>
+
+
+<!----AGENT PRICE TABLE-->
+<section class="agent-price">
+  <div class="price-title">
+    <h2>Agent Price List</h2>
+  </div>
+  <div class="price-list">
+    <div class="both-tags">
+      <div class="title-tag-left">
+        Agent Normal Price <br>( MTN ) 
+      </div>
+      <div class="title-tag-right">
+        Agent Express Price <br>
+        ( MTN )
+      </div>
+    </div>
+    <div class="price-wrapper">
+        <div class="price-list-normal exclude">
+          <ul>
+            <li>1GB = 5.20</li>
+            <li>2GB = 10.80</li>
+            <li>3GB = 15.20</li>
+            <li>4GB = 19.30</li>
+            <li>5GB = 24.50</li>
+            <li>6GB = 28.60</li>
+            <li>8GB = 37.80</li>
+            <li>10GB = 44.30</li>
+            <li>15GB = 64.20</li>
+            <li>20GB = 85.10</li>
+            <li>25GB = 105.30</li>
+            <li>30GB = 125.40</li>
+            <li>40GB = 164</li>
+            <li>50GB = 198.20</li>
+          </ul>
+    </div>
+    <div class="price-list-express exclude">
+        <ul>
+            <li>1GB = 5.40</li>
+            <li>2GB = 10.90</li>
+            <li>3GB = 15.60</li>
+            <li>4GB = 19.90</li>
+            <li>5GB = 24.90</li>
+            <li>6GB = 29.40</li>
+            <li>8GB = 38.50</li>
+            <li>10GB = 45</li>
+            <li>15GB = 65</li>
+            <li>20GB = 85.70</li>
+            <li>25GB = 107.30</li>
+            <li>30GB = 126.20</li>
+            <li>40GB = 165.10</li>
+            <li>50GB = 203</li>
+          </ul>
+    </div>
+    
+    </div>
+  </div>
+</section>
+<!----AGENT PRICE TABLE-->
+<section class="agent-price">
+  <div class="price-title">
+    <h2>TELECEL & AIRTELTIGO </h2>
+  </div>
+  <div class="price-list">
+    <div class="both-tags">
+      <div class="title-tag-left">
+        TELECEL
+      </div>
+      <div class="title-tag-right">
+        AIRTELTIGO
+      </div>
+    </div>
+    <div class="price-wrapper">
+        <div class="price-list-normal include">
+          <ul>
+            <li>2GB = 11.90</li>
+            <li>3GB = 16.70</li>
+            <li>5GB = 24.50</li>
+            <li>10GB = 45.10</li>
+            <li>15GB = 64.60</li>
+            <li>20GB = 87</li>
+            <li>25GB = 105</li>
+            <li>30GB = 134</li>
+            <li>35GB = 138</li>
+            <li>40GB = 160</li>
+            <li>50GB = 199</li>
+            <li>100GB = 385</li>
+          </ul>
+    </div>
+    <div class="price-list-express include">
+        <ul>
+            <li>1GB = 5.50</li>
+            <li>2GB = 11</li>
+            <li>3GB = 14.90</li>
+            <li>4GB = 18</li>
+            <li>5GB = 23.70</li>
+            <li>6GB = 26.70</li>
+            <li>7GB = 30</li>
+            <li>8GB = 36</li>
+            <li>9GB = 40</li>
+            <li>10GB = 50</li>
+            <li>12GB = 52</li>
+            <li>15GB = 69</li>
+            <li>20GB = 89</li>
+            <li>25GB = 111</li>
+            <li>30GB = 129</li>
+            <li>40GB = 163</li>
+            <li>50GB = 110</li>
+          </ul>
+    </div>
+    
+    </div>
+  </div>
+</section>
+
+<div class="register-bnefits">
+  <small>Old price: GHS 150 </small>
+    <p class="priceSub">GHS 100 <img src="./css/icons/eye (2).gif" alt=""></p>
+  <h2>Unlock Exclusive Access </h2>
+<button id="payBtn" class="regis">Pay Now</button>
+</div>
+</section>
+
+
+
+
+
+
+
+  <section class="foot">
+   <div class="foot-content">
+    <div class="cop-right">
+        <p style="text-align:center;color:#888;font-size:14px;">© 2026 Ecodata. All rights reserved.
+      </p>
+    </div>
+      <small class="powered">
+        
+      <strong>Powered by:</strong>   IA E-Business 
+    </small>
+  
+   </div>
+  </section>
+
+
+   <!-----BOTTOM-NAVBAR----->
+  <div class="bottom-navbar" id="navIconDiv">
+    <div class="btom-navIcon" onclick="window.location.href='index.html'">
+      <div class="activeImg" id="activeMtn">
+        <img src="./css/icons/home.png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav">Home</small>
+    </div>
+
+    
+   
+
+    <div class="btom-navIcon">
+      <div class="activeImg activeMin" onclick="window.location.href ='pay.html'"> 
+        <img class="pin" src="./css/icons/like.png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav">Get Discounts</small>
+    </div>
+
+
+
+      <div class="btom-navIcon" >
+      <div class="activeImg" id="activeTel" onclick="window.location.href='afa.html'"> 
+        <img class="pin" src="./css/icons/personal.png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav">AFA</small>
+    </div>
+
+
+     <div class="btom-navIcon" >
+      <div class="activeImg" id="activeAir" onclick="window.location.href='bundlesInfo.html'"> 
+        <img class="pin" src="./css/icons/terms (1).png" alt="" loading="lazy">
+      </div>
+      <small class="bottomIcon-textNav"> Info</small>
+    </div>
+
+
+   
+
+
+  </div>
+
+
+
+
+<!------MENU-CARD----->
+<div class="menu-card-container" id="closeCard">
+       <div class="link">
+       <a href="terms.html">
+        <img src="./css/icons/terms (1).png" alt="image" loading="lazy">
+        <span>Terms of use</span>
+       </a>
+      </div>
+
+
+       <div class="link">
+       <a href="bundlesInfo.html">
+        <img src="./css/icons/list.jpg" alt="image" loading="lazy">
+        <span>Bundles info</span>
+       </a>
+      </div>
+
+      
+       <div class="link">
+       <a href="./ecdoataStore/ecoshop.html">
+        <img src="./css/icons/logoImg.jpeg" alt="image" loading="lazy">
+        <span>EcoData Store</span>
+       </a>
+      </div>
+
+      <div class="link">
+       <a href="./afa.html">
+        <img src="./css/icons/personal.png" alt="image" loading="lazy">
+        <span>MTN AFA</span>
+       </a>
+      </div>
+
+        <div class="link">
+       <a href="./pay.html">
+        <img src="./css/icons/agent.png" alt="image" loading="lazy">
+        <span>Register as Agent</span>
+       </a>
+      </div>
+
+
+
+      <div class="menu-ranking-links">
+        <!--WHATSAPP GROUP-->
+      <a href="https://www.tiktok.com/@ecodata247?_r=1&_d=ei9853mf1g8eec&sec_uid=MS4wLjABAAAAiY9nBAfFbpbd7KRl0y4-JTcRL0WMtPt9Pr-FKt__N-hQvmFZLhhInTTpn7Y5oRos&share_author_id=7484812520763950088&sharer_language=en&source=h5_m&u_code=ejcbk20728bd87&utm_source=copy&utm_campaign=client_share&share_link_id=d9108b99-2843-43f1-8f6c-ed4b72ea3264&share_app_id=1340&ugbiz_name=Account&lang=en&user_id=7484812520763950088&sec_user_id=MS4wLjABAAAAiY9nBAfFbpbd7KRl0y4-JTcRL0WMtPt9Pr-FKt__N-hQvmFZLhhInTTpn7Y5oRos&enable_checksum=1">
+      <button class="join-btn tiktok"><img src="./css/icons/tiktok.png" alt="">Tiktok</button>
+      </a>
+      <!--WHATSAPP GROUP-->
+      <a href="https://chat.whatsapp.com/LwhZNOyUQsJIGTQRL9cIXT?mode=hqrt3">
+      <button class="join-btn grp"><img src="./css/icons/whats.png" alt="" loading="lazy"> WhatsApp Group</button>
+      </a>
+      <!---WHATSAPP CHANNEL-->
+      <a href="https://whatsapp.com/channel/0029VbBgYfqAzNbpoZDtnq3o">
+      <button class="join-btn"><img src="./css/icons/whats.png" alt="" loading="lazy">Join WhatsApp Channel</button>
+      </a>
+      </div>
+
+       <a href="login.html">  <button  id="logout-btn" class="logout-btn">Sign-Up</button></a>
+
+       <button id="logOutBtn" class="log-out">Logout</button>   
+    </div>
+
+    
+<div class="what-group-btn">
+  <span class="informattion">Join</span>
+
+  <a href="https://chat.whatsapp.com/LwhZNOyUQsJIGTQRL9cIXT?mode=hqrt3">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring-delay"></div>
+  <img src="./css/icons/whats.png" alt="" loading="lazy">
+  </a>
+</div>
+
+  <!-- ✅ WhatsApp Floating Chat -->
+<div class="chatBox" id="whatsappChat">
+  <div id="chatButton" class="message">
+    <img src="./css/icons/chatMe.png" alt="image" loading="lazy">
+  </div>
+  <!---whatsapp chatBox-->
+  <div id="chatBox">
+    <h4>Chat Ecodata Admin</h4>
+    <input type="text" id="whatsappMessage" placeholder="Type your message..." />
+    <button id="sendMsgBtn">Send</button>
+  </div>
+</div>
+
+<!---LOADING-SPINNER-->
+<div id="paystackLoader" class="paystack-loader hidden">
+  <div class="loader-card">
+    <div class="orbit-spinner">
+      <span class="spinner"></span>
+    </div>
+    <p>Preparing payment</p>
+    
+  </div>
+</div>
+<!----PAYSTACK-LOADER-->
+
+
+
+
+
+
+
+
+
+
+
+<!----MAIN REGISTER PAGE ENDS----->
+
+
+<!-- ✅ 1. Load Paystack FIRST -->
+<script src="https://js.paystack.co/v2/inline.js"></script>
+
+<!-- ✅ 2. Then load your payment JS -->
+<script type="module" src="./agentpay.js"></script>
+
+<script type="module" src="./firebase-config.js"></script>
+
+
+
+
+
+
+<!---usernameDisplay----->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyClNBlfigtQk8AZWdMZcU9sEtVcIrS0D1g",
+  authDomain: "ecodata-2bee6.firebaseapp.com",
+  projectId: "ecodata-2bee6",
+  storageBucket: "ecodata-2bee6.firebasestorage.app",
+  messagingSenderId: "544837123249",
+  appId: "1:544837123249:web:6c362350a00c6dab10b690"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+onAuthStateChanged(auth, async (user) => {
+  const usernameDisplay = document.getElementById("usernameDisplay");
+
+  if (!user) {
+    // User not logged in, redirect if needed
+   // window.location.href = "login.html"
+    console.log("User not logged in");
+    return;
+  }
+
+  try {
+    const userRef = doc(db, "users", user.uid);
+    const userSnap = await getDoc(userRef);
+
+    if (!userSnap.exists()) return;
+
+    const userData = userSnap.data();
+
+    // 🔥 Redirect immediately if agent
+    if (userData.isAgent === true) {
+      window.location.href = "agentPage.html";
+      return; // stop further execution
+    }
+
+    const greeting = updateClock();
+    // Display username if element exists
+    if (usernameDisplay) {
+      const name = userData.username || "Dear";
+      const suffix = userData.isAgent ? "Agent" : "";
+      usernameDisplay.textContent = `${greeting}, ${name}${suffix}!`;
+    }
+
+  } catch (err) {
+    console.error("Error fetching user data:", err);
+  }
+});
+
+
+const logoutBtn = document.getElementById("logOutBtn");
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", async () => {
+
+    try {
+      await signOut(auth);
+      showSnackBar("Logged out successfully!");
+      //window.location.href = "login.html"; // change if needed
+    } catch (error) {
+      console.error("Logout error:", error);
+      showSnackBar("Error logging out.");
+    }
+  });
+
+}
+
+
+
+
+  
+  // === REAL TIME CLOCK ===
+function updateClock() {
+  const clock = document.getElementById("clock");
+  const now = new Date();
+
+  const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const dayName = days[now.getDay()];
+
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  // Greeting logic
+  let greeting = "";
+  if (hours < 12) greeting = "Good Morning";
+  else if (hours < 18) greeting = "Good Afternoon";
+  else greeting = "Good Evening";
+
+  const ampm = hours >= 12 ? "PM" : "AM";
+
+  hours = hours % 12 || 12;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  clock.innerHTML = `${dayName} ${hours}:${minutes}:${seconds} ${ampm}`;
+
+  return greeting; // 🔥 important
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+
+
+
+// SNACKBAR SECTION //
+// ===== SNACKBAR FUNCTION ===== //
+let snackbarTimeout = null;
+
+function showSnackBar(message, type = "info", duration = 4000) {
+  let snackbar = document.querySelector(".snackbar");
+
+  // Create snackbar if it doesn't exist
+  if (!snackbar) {
+    snackbar = document.createElement("div");
+    snackbar.className = "snackbar";
+
+    snackbar.innerHTML = `
+      <span class="snackbar-text"></span>
+      <div class="snackbar-progress"></div>
+    `;
+
+    document.body.appendChild(snackbar);
+  }
+
+  // Update text
+  snackbar.querySelector(".snackbar-text").textContent = message;
+
+  // Color by type
+  if (type === "success") snackbar.style.background = "rgba(7, 29, 26, 0.95)";
+  else if (type === "error") snackbar.style.background = "#dc3545";
+  else if (type === "warning") snackbar.style.background = "#ffc107";
+  else snackbar.style.background = "rgba(7, 29, 26, 0.95)";
+
+  // Reset progress animation
+  const progress = snackbar.querySelector(".snackbar-progress");
+  progress.style.animation = "none";
+  void progress.offsetWidth;
+  progress.style.animation = `snackbar-progress ${duration}ms linear forwards`;
+
+  snackbar.classList.add("show");
+
+  // Clear previous timeout
+  if (snackbarTimeout) clearTimeout(snackbarTimeout);
+
+  snackbarTimeout = setTimeout(() => {
+    snackbar.classList.remove("show");
+  }, duration);
+}
+// snackbar ends
+
+</script>
+
+<!---NOTIFICATION-DIV-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+const notificationIcon = document.querySelectorAll(".notifity");
+const notifyCount = document.getElementById("notifyCount");
+const NOTIFY_KEY = "notifications_read";
+
+// on page load
+if (localStorage.getItem(NOTIFY_KEY) === "true") {
+  notifyCount.style.display = "none"
+}
+
+// click to mark as read 
+notifyCount.addEventListener("click", () => {
+  notifyCount.style.display = "none";
+  localStorage.setItem(NOTIFY_KEY, "true");
+});
+  });
+</script>
+
+
+<!---MENU-CARD-JS-->
+<!---MENU-CARD-JS-->
+<script>
+document.addEventListener("DOMContentLoaded", ()=> {
+ const cardToggler = document.getElementById("cardToggler");
+ const secondToggler = document.getElementById("menuDarkMode");
+const cardCloser = document.getElementById("closeCard");
+
+  // toggle menucard
+  cardToggler.addEventListener("click", function(e) {
+    e.stopPropagation();
+    if(cardCloser.classList.contains("active")){
+      cardCloser.classList.remove("active");
+    } else{
+      cardCloser.classList.add("active");
+    }
+  });
+
+  // secondToggler
+  secondToggler.addEventListener("click", function(e) {
+    e.stopPropagation();
+
+    if(secondToggler) {
+      cardCloser.classList.add("active");
+    } else {
+      cardCloser.classList.remove("active");
+    }
+  })
+
+  // when ever clicked outside?
+  window.addEventListener("click", function(e) {
+    if(!cardCloser.contains(e.target) && !cardToggler.contains(e.target)) {
+      cardCloser.classList.remove("active");
+    }
+  })
+})
+
+ 
+
+
+</script>
+
+
+
+
+<!----GLOBAL CLOCK-->
+<script>
+  // === REAL TIME CLOCK ===
+function updateClock() {
+  const clock = document.getElementById("clock");
+  const now = new Date();
+  const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const dayName = days[now.getDay()];
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+  clock.innerHTML = `${dayName} ${hours}:${minutes}:${seconds} ${ampm}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+
+
+</script>
+
+
+<!-----DARK-MODE JS-->
+<script>
+  const toggle = document.getElementById("themeToggle");
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const savedTheme = localStorage.getItem("theme");
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      document.body.classList.add("dark-mode");
+      toggle.checked = true;
+    } else {
+      document.body.classList.remove("dark-mode");
+      toggle.checked = false;
+    }
+  }
+
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(systemPrefersDark ? "dark" : "light");
+  }
+
+  toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+      localStorage.setItem("theme", "dark");
+      applyTheme("dark");
+    } else {
+      localStorage.setItem("theme", "light");
+      applyTheme("light");
+    }
+  });
+
+  // Auto-change if system theme changes and user has no preference
+  window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+    if (!localStorage.getItem("theme")) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
+});
+</script>
+
+
+</body>
+</html>
+
+
+
