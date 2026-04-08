@@ -11,16 +11,9 @@
     }
   ],
   "routes": [
-    // Serve static files first
     { "handle": "filesystem" },
-
-    // Redirect root to index.html
     { "src": "/", "dest": "/index.html" },
-
-    // All API calls go to /api/
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
-
-    // Fallback for SPA routes
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
