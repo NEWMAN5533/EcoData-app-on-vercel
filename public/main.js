@@ -559,46 +559,35 @@ async function payWithPaystack(bundle, recipient) {
 // === SEND ORDER TO BACKEND ===
 async function orderBundle(network, recipient, packageName, size, reference) {
   try {
-
     const bundle = lastPurchasedBundle;
     if (!bundle) {
       showSnackBar("⚠ Order context missing");
       return;
     }
 
-    const API_BASE =
-      window.location.hostname === "localhost"
-        ? "http://localhost:3000"
-        : "https://cheapdata-bundles.vercel.app/";
-
-
-    const response = await fetch(
-      `${API_BASE}/api/buy-data?`, { 
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          network,
-          recipient,
-          packageName,
-          size,
-          reference,
-          userEmail: userEmail,
-        }),
-
-      });
+    const response = await fetch('/api/buy-data', {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        network,
+        recipient,
+        pkg: packageName,
+        size,
+        paymentReference: reference,
+        userEmail
+      }),
+    });
 
     const result = await response.json();
+    console.log("API RESPONSE:", result);
 
     if (!result.success) {
-      showSnackBar(`❌ ${result.message || "Order failed"}`, "error", 5000);
+      showSnackBar(`❌ ${result.error || result.message || "Order failed"}`, "error", 5000);
       return;
     }
 
     playSuccessSound();
-      showSnackBar("📱✅ Order Placed successfully!", "success", 6000);
-   
-
-   
+    showSnackBar("📱✅ Order Placed successfully!", "success", 6000);
 
     const returnedOrder = result.order?.order || result.order || result;
 
